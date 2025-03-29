@@ -1,0 +1,19 @@
+# Thư mục của Visual Studio
+.vs/
+
+# Thư mục build của .NET
+bin/
+obj/
+
+# Thư mục chứa thư viện cài đặt qua NuGet
+packages/
+
+# Thư viện của Node.js (nếu có)
+node_modules/
+
+# Các file tạm và file cá nhân
+*.user
+*.suo
+*.cache
+*.log
+*.tmp
