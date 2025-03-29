@@ -5252,11 +5252,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\karsa\\Desktop\\Github\\EXE201\\EXE201\\EXE201.csproj",
+      "projectUniqueName": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\EXE201.csproj",
       "projectName": "EXE201",
-      "projectPath": "C:\\Users\\karsa\\Desktop\\Github\\EXE201\\EXE201\\EXE201.csproj",
+      "projectPath": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\EXE201.csproj",
       "packagesPath": "C:\\Users\\karsa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\karsa\\Desktop\\Github\\EXE201\\EXE201\\obj\\",
+      "outputPath": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\karsa\\AppData\\Roaming\\NuGet\\NuGet.Config",
