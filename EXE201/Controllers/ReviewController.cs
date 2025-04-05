@@ -70,7 +70,7 @@ namespace EXE201.Controllers
         [HttpPost]
         public async Task<ActionResult> Create(ReviewDTO reviewDTO)
         {
-            var existingAccount = await _accountService.GetAccountByIdAsync(reviewDTO.AccountId);
+            var existingAccount = await _accountService.GetByIdAsync(reviewDTO.AccountId);
             var existingPackage = await _packageService.GetPackageByIdAsync(reviewDTO.PackageId);
             if (existingAccount == null)
             {

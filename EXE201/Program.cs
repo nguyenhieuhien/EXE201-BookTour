@@ -24,7 +24,8 @@ namespace EXE201
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddScoped<SystemAccountService>();
-            builder.Services.AddScoped<IAccountService, AccountService>();
+            builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+            builder.Services.AddScoped<IAccountService, AccountService>();  
             builder.Services.AddScoped<ICartRepository, CartRepository>();
             builder.Services.AddScoped<ICartService, CartService>();
             builder.Services.AddScoped<IDestinationRepository, DestinationRepository>();

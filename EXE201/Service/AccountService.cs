@@ -1,105 +1,48 @@
 ﻿using EXE201.Models;
 using Microsoft.EntityFrameworkCore;
 using EXE201.Service.Interface;
-using EXE201.Controllers.DTO.EXE201.DTOs;
+using EXE201.Repository.Interface;
+using EXE201.Repositories;
 
 namespace EXE201.Service
 {
     public class AccountService : IAccountService
     {
-        private readonly EXE201Context _context;
+        private readonly IAccountRepository _accountRepository;
 
-        public AccountService(EXE201Context context)
+        public AccountService(IAccountRepository accountRepository)
         {
-            _context = context;
+            _accountRepository = accountRepository;
         }
 
-        public async Task<IEnumerable<AccountDTO>> GetAllAccountsAsync()
+        public async Task<Account> GetByIdAsync(long id)
         {
-            return await _context.Accounts
-                .Select(a => new AccountDTO
-                {
-                  
-                    UserName = a.UserName,
-                    Email = a.Email,
-                    Phone = a.Phone,
-                    IsActive = a.IsActive,
-                    RoleId = a.RoleId
-                })
-                .ToListAsync();
+            return await _accountRepository.GetAccountByIdAsync(id);
         }
 
-        public async Task<AccountDTO?> GetAccountByIdAsync(long id)
+        public async Task<IEnumerable<Account>> GetAllAsync()
         {
-            var account = await _context.Accounts.FindAsync(id);
-            if (account == null) return null;
-
-            return new AccountDTO
-            {
-                
-                UserName = account.UserName,
-                Email = account.Email,
-                Phone = account.Phone,
-                IsActive = account.IsActive,
-                RoleId = account.RoleId
-            };
+            return await _accountRepository.GetAllAccountsAsync();
         }
 
-        public async Task<AccountDTO?> GetAccountByUsernameAsync(string username)
+        public async Task<Account> GetByNameAsync(string name)
         {
-            var account = await _context.Accounts.FirstOrDefaultAsync(a => a.UserName == username);
-            if (account == null) return null;
-
-            return new AccountDTO
-            {
-              
-                UserName = account.UserName,
-                Email = account.Email,
-                Phone = account.Phone,
-                IsActive = account.IsActive,
-                RoleId = account.RoleId
-            };
+            return await _accountRepository.GetAccountByUsernameAsync(name);
         }
 
-        public async Task AddAccountAsync(AccountDTO dto)
+        public async Task AddAsync(Account account)
         {
-            var account = new Account
-            {
-                UserName = dto.UserName,
-                Email = dto.Email,
-                Phone = dto.Phone,
-                Password = dto.Password, // Hash the password
-                RoleId = dto.RoleId,
-                IsActive = true
-            };
-
-            await _context.Accounts.AddAsync(account);
-            await _context.SaveChangesAsync();
+            await _accountRepository.AddAccountAsync(account);
         }
 
-        public async Task UpdateAccountAsync(long id, AccountDTO dto)
+        public async Task UpdateAsync(Account account)
         {
-            var account = await _context.Accounts.FindAsync(id);
-            if (account == null) return;
-
-            account.UserName = dto.UserName;
-            account.Email = dto.Email;
-            account.Phone = dto.Phone;
-            account.IsActive = dto.IsActive;  // ✅ Fixed this line
-            account.RoleId = dto.RoleId;
-
-            _context.Accounts.Update(account);
-            await _context.SaveChangesAsync();
+            await _accountRepository.UpdateAccountAsync(account);
         }
 
-        public async Task DeleteAccountAsync(long id)
+        public async Task DeleteAsync(long id)
         {
-            var account = await _context.Accounts.FindAsync(id);
-            if (account != null)
-            {
-                _context.Accounts.Remove(account);
-                await _context.SaveChangesAsync();
-            }
+            await _accountRepository.DeleteAccountAsync(id);
         }
     }
 }

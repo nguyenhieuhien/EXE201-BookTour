@@ -1,4 +1,6 @@
-﻿using EXE201.Service.Interface;
+﻿using EXE201.Controllers.DTO.Cart;
+using EXE201.Models;
+using EXE201.Service.Interface;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EXE201.Controllers
@@ -8,65 +10,129 @@ namespace EXE201.Controllers
     public class CartController : ControllerBase
     {
         private readonly ICartService _cartService;
+        private readonly IAccountService _accountService;
 
-        public CartController(ICartService cartService)
+        public CartController(ICartService cartService,IAccountService accountService)
         {
             _cartService = cartService;
+            _accountService = accountService;
         }
+
+
+     
+
+
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetCartById(long id)
+        public async Task<ActionResult<CartDTO>> GetCartById(long id)
         {
             var cart = await _cartService.GetCartByIdAsync(id);
-            if (cart == null) return NotFound();
-            return Ok(cart);
+            if (cart == null)
+                return NotFound(new { Message = $"Cart with ID {id} was not found." });
+
+            return Ok(new CartDTO
+            {
+                Id = cart.Id,
+                AccountId = cart.AccountId,
+                IsActive = cart.IsActive,
+            });
         }
 
-        [HttpGet("account/{accountId}")]
-        public async Task<IActionResult> GetCartsByAccountId(long accountId)
-        {
-            var carts = await _cartService.GetCartsByAccountIdAsync(accountId);
-            return Ok(carts);
-        }
-
-        //[HttpPost]
-        //public async Task<IActionResult> CreateCart([FromBody] CartDTO cartDto)
+        //[HttpGet("{accountId}")]
+        //public async Task<ActionResult<CartDTO>> GetCartByAccountId(long accountId)
         //{
-        //    if (cartDto == null) return BadRequest("Invalid request.");
+        //    var cart = await _cartService.GetCartsByAccountIdAsync(accountId);
+        //    if (cart == null)
+        //        return NotFound(new { Message = $"Cart with account ID {accountId} was not found." });
 
-        //    var cart = new Cart
+        //    return Ok(new CartDTO
         //    {
-        //        AccountId = cartDto.AccountId,
-        //        IsActive = cartDto.IsActive
-        //    };
-
-        //    await _cartService.AddCartAsync(cart);
-        //    return CreatedAtAction(nameof(GetCartById), new { id = cart.Id }, cart);
+        //        Id = cart.Id,
+        //        AccountId = cart.AccountId,
+        //        IsActive = cart.IsActive,
+        //    });
         //}
 
+
+
+        [HttpPost]
+        public async Task<ActionResult> Create(CartDTO cartDTO)
+        {
+            var existingAccount = await _accountService.GetByIdAsync(cartDTO.AccountId);
+            if (existingAccount == null)
+            {
+                return NotFound(new { Message = $"Account with ID {cartDTO.AccountId} was not found." });
+            }
+
+            var cart = new Cart
+            {
+              Id= cartDTO.Id,
+              AccountId = cartDTO.AccountId,
+              IsActive = cartDTO.IsActive,
+            };
+
+            await _cartService.AddCartAsync(cart);
+
+            return CreatedAtAction(nameof(GetCartById), new { id = cart.Id }, new
+            {
+                Message = "Cart created successfully.",
+                Data = cartDTO
+            });
+        }
+
         //[HttpPut("{id}")]
-        //public async Task<IActionResult> UpdateCart(long id, [FromBody] CartDTO cartDto)
+        //public async Task<ActionResult> Update(long id, ReviewDTOUpdate reviewDTOUpdate)
         //{
-        //    if (cartDto == null) return BadRequest("Invalid request.");
 
-        //    var existingCart = await _cartService.GetCartByIdAsync(id);
-        //    if (existingCart == null) return NotFound();
+        //    var existingReview = await _reviewService.GetReviewByIdAsync(id);
+        //    if (existingReview == null)
+        //    {
+        //        return NotFound(new { Message = $"No Review found with ID {id}." });
+        //    }
 
-        //    existingCart.AccountId = cartDto.AccountId;
-        //    existingCart.IsActive = cartDto.IsActive;
+        //    if (reviewDTOUpdate.Rating < 1 || reviewDTOUpdate.Rating > 5)
+        //    {
+        //        return BadRequest(new { Message = "Rating must be between 1 and 5." });
+        //    }
 
-        //    await _cartService.UpdateCartAsync(existingCart);
-        //    return NoContent();
+        //    existingReview.Rating = reviewDTOUpdate.Rating;
+        //    existingReview.Comment = reviewDTOUpdate.Comment;
+        //    await _reviewService.UpdateReviewAsync(existingReview);
+
+        //    return Ok(new
+        //    {
+        //        Message = "Review updated successfully.",
+        //        Data = new
+        //        {
+        //            Id = existingReview.Id,
+        //            AccountId = existingReview.AccountId,
+        //            PackageId = existingReview.PackageId,
+        //            Rating = existingReview.Rating,
+        //            Comment = existingReview.Comment,
+        //            CreateDate = existingReview.CreateDate,
+        //            IsActive = existingReview.IsActive,
+        //        }
+        //    });
         //}
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCart(long id)
+        public async Task<IActionResult> Delete(long id)
         {
             var existingCart = await _cartService.GetCartByIdAsync(id);
-            if (existingCart == null) return NotFound();
+            if (existingCart == null)
 
+                return NotFound(new { Message = $"No Cart found with ID {id}." });
             await _cartService.DeleteCartAsync(id);
-            return NoContent();
+            return Ok(new
+            {
+                Message = $"Cart with ID {id} has been deleted successfully.",
+                Data = new
+                {
+                   Id = existingCart.Id,
+                   AccountId =existingCart.AccountId,
+                   IsActive = existingCart.IsActive,
+                }
+            });
         }
     }
 }

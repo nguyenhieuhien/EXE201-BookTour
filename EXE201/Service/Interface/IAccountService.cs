@@ -1,14 +1,15 @@
-﻿using EXE201.Controllers.DTO.EXE201.DTOs;
+﻿
+using EXE201.Models;
 
 namespace EXE201.Service.Interface
 {
     public interface IAccountService
     {
-        Task<IEnumerable<AccountDTO>> GetAllAccountsAsync();
-        Task<AccountDTO?> GetAccountByIdAsync(long id);
-        Task<AccountDTO?> GetAccountByUsernameAsync(string username);
-        Task AddAccountAsync(AccountDTO dto);
-        Task UpdateAccountAsync(long id, AccountDTO dto);
-        Task DeleteAccountAsync(long id);
+        Task<Account> GetByIdAsync(long id);
+        Task<IEnumerable<Account>> GetAllAsync();
+        Task<Account> GetByNameAsync(string name);
+        Task AddAsync(Account account);
+        Task UpdateAsync(Account account);
+        Task DeleteAsync(long id);
     }
 }

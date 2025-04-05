@@ -30,7 +30,7 @@ namespace EXE201.Controllers
                 var items = new List<ItemData> { item };
 
                 var paymentData = new PaymentData(
-                    orderCode: 4, // Mã đơn hàng
+                    orderCode: 5, // Mã đơn hàng
                     amount: 2000, // Số tiền
                     description: "Chuyen Tien Cho Hien ", // Giới hạn 25 ký tự
                     items: items,

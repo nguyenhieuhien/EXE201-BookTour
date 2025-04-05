@@ -61,7 +61,7 @@ namespace EXE201.Controllers
         [HttpPost]
         public async Task<ActionResult> Create(NotificationDTO notificationDTO)
         {
-            var existingAccount = await _accountService.GetAccountByIdAsync(notificationDTO.AccountId);
+            var existingAccount = await _accountService.GetByIdAsync(notificationDTO.AccountId);
 
             if (existingAccount == null)
             {

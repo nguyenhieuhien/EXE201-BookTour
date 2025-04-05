@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "EXE201.Controllers.AccountsController",
-    "Method": "GetAccounts",
+    "Method": "GetAll",
     "RelativePath": "api/Accounts",
     "HttpMethod": "GET",
     "IsController": true,
@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[EXE201.Controllers.DTO.EXE201.DTOs.AccountDTO, EXE201, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[EXE201.Controllers.DTO.Account.AccountDTO, EXE201, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -21,15 +21,15 @@
   },
   {
     "ContainingType": "EXE201.Controllers.AccountsController",
-    "Method": "CreateAccount",
+    "Method": "Create",
     "RelativePath": "api/Accounts",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "accountDto",
-        "Type": "EXE201.Controllers.DTO.EXE201.DTOs.AccountDTO",
+        "Name": "accountDTOCreate",
+        "Type": "EXE201.Controllers.DTO.Account.AccountDTOCreate",
         "IsRequired": true
       }
     ],
@@ -37,7 +37,7 @@
   },
   {
     "ContainingType": "EXE201.Controllers.AccountsController",
-    "Method": "GetAccount",
+    "Method": "GetById",
     "RelativePath": "api/Accounts/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -51,7 +51,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "EXE201.Controllers.DTO.EXE201.DTOs.AccountDTO",
+        "Type": "EXE201.Controllers.DTO.Account.AccountDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -63,7 +63,7 @@
   },
   {
     "ContainingType": "EXE201.Controllers.AccountsController",
-    "Method": "UpdateAccount",
+    "Method": "Update",
     "RelativePath": "api/Accounts/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -75,8 +75,8 @@
         "IsRequired": true
       },
       {
-        "Name": "accountDto",
-        "Type": "EXE201.Controllers.DTO.EXE201.DTOs.AccountDTO",
+        "Name": "accountDTOUpdate",
+        "Type": "EXE201.Controllers.DTO.Account.AccountDTOUpdate",
         "IsRequired": true
       }
     ],
@@ -84,7 +84,7 @@
   },
   {
     "ContainingType": "EXE201.Controllers.AccountsController",
-    "Method": "DeleteAccount",
+    "Method": "Delete",
     "RelativePath": "api/Accounts/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -251,6 +251,22 @@
       {
         "Name": "id",
         "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201.Controllers.CartController",
+    "Method": "Create",
+    "RelativePath": "api/Cart",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartDTO",
+        "Type": "EXE201.Controllers.DTO.Cart.CartDTO",
         "IsRequired": true
       }
     ],
@@ -270,11 +286,21 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "EXE201.Controllers.DTO.Cart.CartDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "EXE201.Controllers.CartController",
-    "Method": "DeleteCart",
+    "Method": "Delete",
     "RelativePath": "api/Cart/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -282,22 +308,6 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int64",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "EXE201.Controllers.CartController",
-    "Method": "GetCartsByAccountId",
-    "RelativePath": "api/Cart/account/{accountId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "accountId",
         "Type": "System.Int64",
         "IsRequired": true
       }

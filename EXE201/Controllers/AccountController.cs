@@ -1,5 +1,5 @@
-﻿using EXE201.Controllers.DTO.EXE201.DTOs;
-
+﻿using EXE201.Controllers.DTO.Account;
+using EXE201.Models;
 using EXE201.Service.Interface;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,6 +9,7 @@ namespace EXE201.Controllers
     [ApiController]
     public class AccountsController : ControllerBase
     {
+  
         private readonly IAccountService _accountService;
 
         public AccountsController(IAccountService accountService)
@@ -16,50 +17,137 @@ namespace EXE201.Controllers
             _accountService = accountService;
         }
 
+
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<AccountDTO>>> GetAccounts()
+        public async Task<ActionResult<IEnumerable<AccountDTO>>> GetAll()
         {
-            return Ok(await _accountService.GetAllAccountsAsync());
+            var accounts = await _accountService.GetAllAsync();
+            var result = accounts.Select(account => new AccountDTO
+            {
+                Id = account.Id,
+                UserName = account.UserName,
+                Password = account.Password,
+                Email = account.Email,
+                Phone = account.Phone,
+                IsActive = account.IsActive,
+            }).ToList();
+
+            return Ok(result);
         }
+
+
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<AccountDTO>> GetAccount(long id)
+        public async Task<ActionResult<AccountDTO>> GetById(long id)
         {
-            var account = await _accountService.GetAccountByIdAsync(id);
+            var account = await _accountService.GetByIdAsync(id);
             if (account == null)
-                return NotFound();
-            return Ok(account);
+                return NotFound(new { Message = $"Account with ID {id} was not found." });
+
+            return Ok(new AccountDTO
+            {
+                Id = account.Id,
+                RoleId = account.RoleId,
+                UserName = account.UserName,
+                Password = account.Password,
+                Email = account.Email,
+                Phone = account.Phone,
+                IsActive = account.IsActive,
+            });
         }
 
-        [HttpPost]
-        public async Task<IActionResult> CreateAccount([FromBody] AccountDTO accountDto)
-        {
-            if (accountDto == null) return BadRequest("Invalid account data.");
 
-            await _accountService.AddAccountAsync(accountDto);
-            return CreatedAtAction(nameof(GetAccount), accountDto);
+        [HttpPost]
+        public async Task<ActionResult> Create(AccountDTOCreate accountDTOCreate)
+        {
+            var existingAccount = await _accountService.GetByIdAsync(accountDTOCreate.Id);
+            var existingUsername = await _accountService.GetByNameAsync(accountDTOCreate.UserName);
+            if (existingAccount != null)
+            {
+                return Conflict(new { Message = $"Account with ID {accountDTOCreate.Id} was found." });
+            }
+
+            if (existingUsername != null)
+            {
+                return Conflict(new { Message = $"Account with Username {accountDTOCreate.UserName} was found." });
+            }
+            
+
+            var account = new Account
+            {
+                Id = accountDTOCreate.Id,
+                RoleId = 3,
+                UserName = accountDTOCreate.UserName,
+                Password = accountDTOCreate.Password,
+                Email = accountDTOCreate.Email,
+                Phone = accountDTOCreate.Phone,
+                IsActive = true,
+            };
+
+            await _accountService.AddAsync(account);
+
+            return CreatedAtAction(nameof(GetById), new { id = account.Id }, new
+            {
+                Message = "Account created successfully.",
+                Data = accountDTOCreate
+            });
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateAccount(long id, [FromBody] AccountDTO accountDto)
+        public async Task<ActionResult> Update(long id, AccountDTOUpdate accountDTOUpdate)
         {
-            if (accountDto == null) return BadRequest("Invalid account data.");
 
-            var existingAccount = await _accountService.GetAccountByIdAsync(id);
-            if (existingAccount == null) return NotFound();
+            var existingAccount = await _accountService.GetByIdAsync(id);
+            if (existingAccount == null)
+            {
+                return NotFound(new { Message = $"Account with ID {id} was not found." });
+            }
 
-            await _accountService.UpdateAccountAsync(id, accountDto);
-            return NoContent();
+            existingAccount.UserName = accountDTOUpdate.UserName;
+            existingAccount.Password = accountDTOUpdate.Password;
+            existingAccount.Email = accountDTOUpdate.Email;
+            existingAccount.Phone = accountDTOUpdate.Phone; 
+               await _accountService.UpdateAsync(existingAccount);
+
+            return Ok(new
+            {
+                Message = "Account updated successfully.",
+                Data = new
+                {
+                   Id = existingAccount.Id,
+                   RoleId = existingAccount.RoleId,
+                   UserName = existingAccount.UserName,
+                   Password = existingAccount.Password,
+                   Email = existingAccount.Email,
+                   Phone = existingAccount.Phone,
+                   IsActive = existingAccount.IsActive,
+
+                }
+            });
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteAccount(long id)
+        public async Task<IActionResult> Delete(long id)
         {
-            var existingAccount = await _accountService.GetAccountByIdAsync(id);
-            if (existingAccount == null) return NotFound();
+            var existingAccount = await _accountService.GetByIdAsync(id);
+            if (existingAccount == null)
 
-            await _accountService.DeleteAccountAsync(id);
-            return NoContent();
+                return NotFound(new { Message = $"No Account found with ID {id}." });
+            await _accountService.DeleteAsync(id);
+            return Ok(new
+            {
+                Message = $"Account with ID {id} has been deleted successfully.",
+                Data = new
+                {
+                    Id = existingAccount.Id,
+                    RoleId = existingAccount.RoleId,
+                    UserName = existingAccount.UserName,
+                    Password = existingAccount.Password,
+                    Email = existingAccount.Email,
+                    Phone = existingAccount.Phone,
+                    IsActive = existingAccount.IsActive,
+                }
+            });
         }
     }
 }
