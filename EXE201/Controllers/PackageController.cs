@@ -72,35 +72,31 @@ namespace EXE201.Controllers
             var existingAccount = await _accountService.GetByIdAsync(packageDTOCreate.AccountId);
             var existingDestination = await _destinationService.GetDestinationByIdAsync(packageDTOCreate.DestinationId);
             if (existingAccount == null)
-            {
                 return NotFound(new { Message = $"Account with ID {packageDTOCreate.AccountId} was not found." });
-            }
             if (existingDestination == null)
-            {
-                return NotFound(new { Message = $"Destination with ID {packageDTOCreate.AccountId} was not found." });
-            }
+                return NotFound(new { Message = $"Destination with ID {packageDTOCreate.DestinationId} was not found." });
 
             var package = new Package
             {
-                //Id = packageDTOCreate.Id,
                 AccountId = packageDTOCreate.AccountId,
                 DestinationId = packageDTOCreate.DestinationId,
                 Name = packageDTOCreate.Name,
                 Description = packageDTOCreate.Description,
                 Rating = packageDTOCreate.Rating,
-                Price = packageDTOCreate.Price,
                 PictureUrl = packageDTOCreate.PictureUrl,
                 IsActive = true,
+                Price = 0 // Giá sẽ được tính sau khi thêm các PackageService
             };
 
             await _packageService.AddPackageAsync(package);
 
             return CreatedAtAction(nameof(GetById), new { id = package.Id }, new
             {
-                Message = "Package created successfully.",
-                Data = packageDTOCreate
+                Message = "Package created successfully. Please add PackageServices to update price.",
+                Data = package
             });
         }
+
 
 
         [HttpPut("{id}")]

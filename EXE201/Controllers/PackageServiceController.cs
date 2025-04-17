@@ -55,6 +55,7 @@ namespace EXE201.Controllers
                 IsActive = packageService.IsActive
             });
         }
+
         [HttpPost]
         public async Task<ActionResult> Create(PackageServiceDTOCreate packageServiceDTOCreate)
         {
@@ -68,52 +69,94 @@ namespace EXE201.Controllers
             {
                 return NotFound(new { Message = $"Package with ID {packageServiceDTOCreate.PackageId} was not found." });
             }
+
+            var priceService = existingService.Price;
+
             var packageService = new Models.PackageService
             {
                 //Id = packageServiceDTO.Id,
                 PackageId = packageServiceDTOCreate.PackageId,
                 ServiceId = packageServiceDTOCreate.ServiceId,
-                Price = packageServiceDTOCreate.Price,
+                Price = priceService,
                 IsActive = true
             };
+
 
             await _packageServiceService.AddPackageServiceAsync(packageService);
 
             return CreatedAtAction(nameof(GetById), new { id = packageService.Id }, new
             {
                 Message = "PackageService created successfully.",
-                Data = packageServiceDTOCreate
-            });
-        }
-
-        [HttpPut("{id}")]
-        public async Task<ActionResult> Update(long id, PackageServiceDTOUpdate packageServiceDTOUpdate)
-        {
-
-            var existingPackageService = await _packageServiceService.GetPackageServiceByIdAsync(id);
-            if (existingPackageService == null)
-            {
-                return NotFound(new { Message = $"No PackageService found with ID {id}." });
-            }
-
-
-            existingPackageService.Price = packageServiceDTOUpdate.Price;
-
-            await _packageServiceService.UpdatePackageServiceAsync(existingPackageService);
-
-            return Ok(new
-            {
-                Message = "PackageService updated successfully.",
                 Data = new
                 {
-                    Id = existingPackageService.Id,
-                    PackageId = existingPackageService.PackageId,
-                    ServiceId = existingPackageService.ServiceId,
-                    Price = existingPackageService.Price,
-                    IsActive = existingPackageService.IsActive
+                    packageService.Id,
+                    packageService.PackageId,
+                    packageService.ServiceId,
+                    Price = priceService,
+                    packageService.IsActive
                 }
             });
         }
+
+        //[HttpPost]
+        //public async Task<ActionResult> Create(PackageServiceDTOCreate packageServiceDTOCreate)
+        //{
+        //    var existingService = await _service.GetByIdAsync(packageServiceDTOCreate.ServiceId);
+        //    var existingPackage = await _packageService.GetPackageByIdAsync(packageServiceDTOCreate.PackageId);
+        //    if (existingService == null)
+        //    {
+        //        return NotFound(new { Message = $"Service with ID {packageServiceDTOCreate.ServiceId} was not found." });
+        //    }
+        //    if (existingPackage == null)
+        //    {
+        //        return NotFound(new { Message = $"Package with ID {packageServiceDTOCreate.PackageId} was not found." });
+        //    }
+        //    var packageService = new Models.PackageService
+        //    {
+        //        //Id = packageServiceDTO.Id,
+        //        PackageId = packageServiceDTOCreate.PackageId,
+        //        ServiceId = packageServiceDTOCreate.ServiceId,
+        //        Price = packageServiceDTOCreate.Price,
+        //        IsActive = true
+        //    };
+
+        //    await _packageServiceService.AddPackageServiceAsync(packageService);
+
+        //    return CreatedAtAction(nameof(GetById), new { id = packageService.Id }, new
+        //    {
+        //        Message = "PackageService created successfully.",
+        //        Data = packageServiceDTOCreate
+        //    });
+        //}
+
+        //[HttpPut("{id}")]
+        //public async Task<ActionResult> Update(long id, PackageServiceDTOUpdate packageServiceDTOUpdate)
+        //{
+
+        //    var existingPackageService = await _packageServiceService.GetPackageServiceByIdAsync(id);
+        //    if (existingPackageService == null)
+        //    {
+        //        return NotFound(new { Message = $"No PackageService found with ID {id}." });
+        //    }
+
+
+        //    existingPackageService.Price = packageServiceDTOUpdate.Price;
+
+        //    await _packageServiceService.UpdatePackageServiceAsync(existingPackageService);
+
+        //    return Ok(new
+        //    {
+        //        Message = "PackageService updated successfully.",
+        //        Data = new
+        //        {
+        //            Id = existingPackageService.Id,
+        //            PackageId = existingPackageService.PackageId,
+        //            ServiceId = existingPackageService.ServiceId,
+        //            Price = existingPackageService.Price,
+        //            IsActive = existingPackageService.IsActive
+        //        }
+        //    });
+        //}
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(long id)

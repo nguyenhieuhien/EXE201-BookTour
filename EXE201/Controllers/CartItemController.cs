@@ -51,13 +51,28 @@ namespace EXE201.Controllers
                     IsActive = item.IsActive
                 });
             }
-
             return Ok(result);
         }
 
+        // Lấy tất cả CartItem theo AccountId
+        [HttpGet("account/{accountId}")]
+        public async Task<ActionResult<IEnumerable<CartItemDTO>>> GetByAccountId(long accountId)
+        {
+            var cartItems = await _cartItemService.GetByAccountIdAsync(accountId);
+            var result = cartItems.Select(item => new CartItemDTO
+            {
+                Id = item.Id,
+                PackageId = item.PackageId,
+                CartId = item.CartId,
+                IsActive = item.IsActive
+            });
+            return Ok(result);
+        }
+
+
         // Thêm CartItem
         [HttpPost]
-        public async Task<ActionResult> Add(CartItemDTOCreate cartItemDTOCreate)
+        public async Task<ActionResult> AddPackageToCart(CartItemDTOCreate cartItemDTOCreate)
         {
             var cartItem = new CartItem
             {   

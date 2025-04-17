@@ -4,6 +4,6 @@
     {
         public long PackageId { get; set; }
         public long ServiceId { get; set; }
-        public double Price { get; set; }
+        //public double Price { get; set; }
     }
 }

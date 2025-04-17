@@ -101,17 +101,27 @@
   {
     "ContainingType": "EXE201.Controllers.BookingDetailController",
     "Method": "GetAll",
-    "RelativePath": "api/booking-details",
+    "RelativePath": "api/BookingDetail",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[EXE201.Controllers.DTO.BookingDetail.BookingDetailDTO, EXE201, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "EXE201.Controllers.BookingDetailController",
     "Method": "Create",
-    "RelativePath": "api/booking-details",
+    "RelativePath": "api/BookingDetail",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -127,7 +137,7 @@
   {
     "ContainingType": "EXE201.Controllers.BookingDetailController",
     "Method": "GetById",
-    "RelativePath": "api/booking-details/{id}",
+    "RelativePath": "api/BookingDetail/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -138,12 +148,22 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "EXE201.Controllers.DTO.BookingDetail.BookingDetailDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "EXE201.Controllers.BookingDetailController",
     "Method": "Update",
-    "RelativePath": "api/booking-details/{id}",
+    "RelativePath": "api/BookingDetail/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -164,7 +184,7 @@
   {
     "ContainingType": "EXE201.Controllers.BookingDetailController",
     "Method": "Delete",
-    "RelativePath": "api/booking-details/{id}",
+    "RelativePath": "api/BookingDetail/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -284,7 +304,7 @@
   },
   {
     "ContainingType": "EXE201.Controllers.CartItemController",
-    "Method": "Add",
+    "Method": "AddPackageToCart",
     "RelativePath": "api/CartItem",
     "HttpMethod": "POST",
     "IsController": true,
@@ -360,6 +380,32 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201.Controllers.CartItemController",
+    "Method": "GetByAccountId",
+    "RelativePath": "api/CartItem/account/{accountId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accountId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[EXE201.Controllers.DTO.CartItem.CartItemDTO, EXE201, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "EXE201.Controllers.CartItemController",
@@ -946,27 +992,6 @@
   },
   {
     "ContainingType": "EXE201.Controllers.PackageServiceController",
-    "Method": "Update",
-    "RelativePath": "api/packageservices/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int64",
-        "IsRequired": true
-      },
-      {
-        "Name": "packageServiceDTOUpdate",
-        "Type": "EXE201.Controllers.DTO.PackageService.PackageServiceDTOUpdate",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "EXE201.Controllers.PackageServiceController",
     "Method": "Delete",
     "RelativePath": "api/packageservices/{id}",
     "HttpMethod": "DELETE",
@@ -984,11 +1009,17 @@
   {
     "ContainingType": "EXE201.Controllers.PayOSController",
     "Method": "CreatePayment",
-    "RelativePath": "api/PayOS/create-payment",
+    "RelativePath": "api/PayOS/create-payment/{bookingId}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "bookingId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

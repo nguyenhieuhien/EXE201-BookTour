@@ -28,6 +28,20 @@ namespace EXE201.Repository
         {
             await _context.PackageServices.AddAsync(packageService);
             await _context.SaveChangesAsync();
+
+            // Cập nhật tổng giá của package
+            var package = await _context.Packages.FindAsync(packageService.PackageId);
+            if (package != null)
+            {
+                var totalPrice = await _context.PackageServices
+                    .Where(ps => ps.PackageId == package.Id)
+                    .SumAsync(ps => ps.Price);
+
+                package.Price = totalPrice;
+
+                _context.Packages.Update(package); // <- Đảm bảo EF theo dõi update
+                await _context.SaveChangesAsync(); // <- PHẢI có cái này
+            }
         }
 
         public async Task UpdateAsync(PackageService packageService)

@@ -8,6 +8,7 @@ namespace EXE201.Repository.Interface
     {
         Task<CartItem> GetByIdAsync(long id);
         Task<IEnumerable<CartItem>> GetByCartIdAsync(long cartId);
+        Task<IEnumerable<CartItem>> GetByAccountIdAsync(long accountId);
         Task AddAsync(CartItem cartItem);
         Task UpdateAsync(CartItem cartItem);
         Task DeleteAsync(long id);

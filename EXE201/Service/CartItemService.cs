@@ -1,6 +1,7 @@
 ﻿using EXE201.Models;
 using EXE201.Repository.Interface;
 using EXE201.Service.Interface;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -24,6 +25,11 @@ namespace EXE201.Service
         {
             return await _cartItemRepository.GetByCartIdAsync(cartId);
         }
+        public async Task<IEnumerable<CartItem>> GetByAccountIdAsync(long accountId)
+        {
+            return await _cartItemRepository.GetByAccountIdAsync(accountId);
+        }
+
 
         public async Task AddAsync(CartItem cartItem)
         {

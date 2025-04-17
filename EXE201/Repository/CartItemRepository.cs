@@ -25,6 +25,13 @@ namespace EXE201.Repository
             return await _context.CartItems.Where(ci => ci.CartId == cartId).ToListAsync();
         }
 
+        public async Task<IEnumerable<CartItem>> GetByAccountIdAsync(long accountId)
+        {
+            return await _context.CartItems
+                .Where(ci => ci.IsActive && ci.Cart.AccountId == accountId)
+                .ToListAsync();
+        }
+
         public async Task AddAsync(CartItem cartItem)
         {
             await _context.CartItems.AddAsync(cartItem);
