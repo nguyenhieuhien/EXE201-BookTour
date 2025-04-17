@@ -53,21 +53,21 @@ namespace EXE201.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Create(ServiceDTO serviceDTO)
+        public async Task<ActionResult> Create(ServiceDTOCreate serviceDTOCreate)
         {
-            var existingService = await _serviceService.GetByNameAsync(serviceDTO.Name);
+            var existingService = await _serviceService.GetByNameAsync(serviceDTOCreate.Name);
             if (existingService != null)
             {
-                return Conflict(new { Message = $"Service with name '{serviceDTO.Name}' already exists." });
+                return Conflict(new { Message = $"Service with name '{serviceDTOCreate.Name}' already exists." });
             }
 
             var service = new Models.Service
             {
-                Id = serviceDTO.Id,
-                Name = serviceDTO.Name,
-                Description = serviceDTO.Description,
-                Price = serviceDTO.Price,
-                IsActive = serviceDTO.IsActive
+                //Id = serviceDTO.Id,
+                Name = serviceDTOCreate.Name,
+                Description = serviceDTOCreate.Description,
+                Price = serviceDTOCreate.Price,
+                IsActive = true,
             };
 
             await _serviceService.AddAsync(service);
@@ -75,7 +75,7 @@ namespace EXE201.Controllers
             return CreatedAtAction(nameof(GetById), new { id = service.Id }, new
             {
                 Message = "Service created successfully.",
-                Data = serviceDTO
+                Data = serviceDTOCreate
             });
         }
 

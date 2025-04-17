@@ -1,4 +1,4 @@
-﻿namespace EXE201.Controllers.DTO
+﻿namespace EXE201.Controllers.DTO.BookingDetail
 {
     public class BookingDetailDTO
     {

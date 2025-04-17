@@ -57,17 +57,18 @@ namespace EXE201.Controllers
 
         // Thêm CartItem
         [HttpPost]
-        public async Task<ActionResult> Add(CartItemDTO cartItemDTO)
+        public async Task<ActionResult> Add(CartItemDTOCreate cartItemDTOCreate)
         {
             var cartItem = new CartItem
-            {   Id = cartItemDTO.Id,
-                PackageId = cartItemDTO.PackageId,
-                CartId = cartItemDTO.CartId,
-                IsActive = cartItemDTO.IsActive
+            {   
+                //Id = cartItemDTOCreate.Id,
+                PackageId = cartItemDTOCreate.PackageId,
+                CartId = cartItemDTOCreate.CartId,
+                IsActive = true
             };
 
             await _cartItemService.AddAsync(cartItem);
-            return CreatedAtAction(nameof(GetById), new { id = cartItem.Id }, cartItemDTO);
+            return CreatedAtAction(nameof(GetById), new { id = cartItem.Id }, cartItemDTOCreate);
         }
 
         // Cập nhật CartItem

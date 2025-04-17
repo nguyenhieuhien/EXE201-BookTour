@@ -1,12 +1,7 @@
-﻿using System;
-
-namespace EXE201.DTO
+﻿namespace EXE201.Controllers.DTO.Booking
 {
-    public class BookingDTO
+    public class BookingDTOUpdate
     {
-        public long Id { get; set; }
-        public long AccountId { get; set; }
-        public long? DiscountId { get; set; }
         public string Description { get; set; } = null!;
         public DateTime BookingDate { get; set; }
         public double TotalPrice { get; set; }

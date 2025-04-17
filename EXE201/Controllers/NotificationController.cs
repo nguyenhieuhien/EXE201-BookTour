@@ -59,22 +59,22 @@ namespace EXE201.Controllers
 
 
         [HttpPost]
-        public async Task<ActionResult> Create(NotificationDTO notificationDTO)
+        public async Task<ActionResult> Create(NotificationDTOCreate notificationDTOCreate)
         {
-            var existingAccount = await _accountService.GetByIdAsync(notificationDTO.AccountId);
+            var existingAccount = await _accountService.GetByIdAsync(notificationDTOCreate.AccountId);
 
             if (existingAccount == null)
             {
-                return NotFound(new { Message = $"Account with ID {notificationDTO.AccountId} was not found." });
+                return NotFound(new { Message = $"Account with ID {notificationDTOCreate.AccountId} was not found." });
             }
 
             var notification = new Notification
             {
-                Id = notificationDTO.Id,
-                AccountId = notificationDTO.AccountId,
-                Title = notificationDTO.Title,
-                Description = notificationDTO.Description,
-                IsActive = notificationDTO.IsActive,
+                //Id = notificationDTOCreate.Id,
+                AccountId = notificationDTOCreate.AccountId,
+                Title = notificationDTOCreate.Title,
+                Description = notificationDTOCreate.Description,
+                IsActive = true,
             };
 
             await _notificationService.AddNotification(notification);
@@ -82,7 +82,7 @@ namespace EXE201.Controllers
             return CreatedAtAction(nameof(GetById), new { id = notification.Id }, new
             {
                 Message = "Notification created successfully.",
-                Data = notificationDTO
+                Data = notificationDTOCreate
             });
         }
 

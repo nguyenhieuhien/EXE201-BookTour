@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using EXE201.DTO;
+using EXE201.Controllers.DTO.Booking;
 using EXE201.Models;
 using EXE201.Repository.Interface;
 using EXE201.Service.Interface;

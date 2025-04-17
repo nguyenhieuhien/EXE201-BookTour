@@ -58,22 +58,21 @@ public partial class EXE201Context : DbContext
         return connectionString;
     }
 
-
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseSqlServer(GetConnectionString("DefaultConnection")).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+    //    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+    //        => optionsBuilder.UseSqlServer("Data Source=LAPTOP-990UPKS6;Initial Catalog=EXE201;Persist Security Info=True;User ID=sa;Password=12345");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Account>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Account__3213E83F29698DD6");
+            entity.HasKey(e => e.Id).HasName("PK__Account__3213E83F4AD129E2");
 
             entity.ToTable("Account");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Email)
                 .IsRequired()
                 .HasMaxLength(255);
@@ -90,18 +89,16 @@ public partial class EXE201Context : DbContext
             entity.HasOne(d => d.Role).WithMany(p => p.Accounts)
                 .HasForeignKey(d => d.RoleId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Account__RoleId__08B54D69");
+                .HasConstraintName("FK__Account__RoleId__571DF1D5");
         });
 
         modelBuilder.Entity<Booking>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Booking__3213E83FA62850D0");
+            entity.HasKey(e => e.Id).HasName("PK__Booking__3213E83F7002413C");
 
             entity.ToTable("Booking");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.BookingDate).HasColumnType("datetime");
             entity.Property(e => e.Description)
                 .IsRequired()
@@ -114,82 +111,74 @@ public partial class EXE201Context : DbContext
             entity.HasOne(d => d.Account).WithMany(p => p.Bookings)
                 .HasForeignKey(d => d.AccountId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Booking__Account__09A971A2");
+                .HasConstraintName("FK__Booking__Account__5812160E");
 
             entity.HasOne(d => d.Discount).WithMany(p => p.Bookings)
                 .HasForeignKey(d => d.DiscountId)
-                .HasConstraintName("FK__Booking__Discoun__0A9D95DB");
+                .HasConstraintName("FK__Booking__Discoun__59063A47");
         });
 
         modelBuilder.Entity<BookingDetail>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Booking___3213E83F907F9B42");
+            entity.HasKey(e => e.Id).HasName("PK__Booking___3213E83F7C4D5FB3");
 
             entity.ToTable("Booking_Detail");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
 
             entity.HasOne(d => d.Booking).WithMany(p => p.BookingDetails)
                 .HasForeignKey(d => d.BookingId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Booking_D__Booki__0B91BA14");
+                .HasConstraintName("FK__Booking_D__Booki__59FA5E80");
 
             entity.HasOne(d => d.Package).WithMany(p => p.BookingDetails)
                 .HasForeignKey(d => d.PackageId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Booking_D__Packa__0C85DE4D");
+                .HasConstraintName("FK__Booking_D__Packa__5AEE82B9");
         });
 
         modelBuilder.Entity<Cart>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Cart__3213E83FD36AEA56");
+            entity.HasKey(e => e.Id).HasName("PK__Cart__3213E83F3A68FB77");
 
             entity.ToTable("Cart");
 
-            entity.HasIndex(e => e.AccountId, "UQ__Cart__349DA5A7D0872525").IsUnique();
+            entity.HasIndex(e => e.AccountId, "UQ__Cart__349DA5A762ECDBB3").IsUnique();
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
 
             entity.HasOne(d => d.Account).WithOne(p => p.Cart)
                 .HasForeignKey<Cart>(d => d.AccountId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Cart__AccountId__0D7A0286");
+                .HasConstraintName("FK__Cart__AccountId__5BE2A6F2");
         });
 
         modelBuilder.Entity<CartItem>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Cart_Ite__3213E83F7280DB57");
+            entity.HasKey(e => e.Id).HasName("PK__Cart_Ite__3213E83F71CE759F");
 
             entity.ToTable("Cart_Item");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
 
             entity.HasOne(d => d.Cart).WithMany(p => p.CartItems)
                 .HasForeignKey(d => d.CartId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Cart_Item__CartI__0E6E26BF");
+                .HasConstraintName("FK__Cart_Item__CartI__5CD6CB2B");
 
             entity.HasOne(d => d.Package).WithMany(p => p.CartItems)
                 .HasForeignKey(d => d.PackageId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Cart_Item__Packa__0F624AF8");
+                .HasConstraintName("FK__Cart_Item__Packa__5DCAEF64");
         });
 
         modelBuilder.Entity<Destination>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Destinat__3213E83FF76F357A");
+            entity.HasKey(e => e.Id).HasName("PK__Destinat__3213E83F51CA8BD7");
 
             entity.ToTable("Destination");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Description)
                 .IsRequired()
                 .HasMaxLength(255);
@@ -203,13 +192,11 @@ public partial class EXE201Context : DbContext
 
         modelBuilder.Entity<Discount>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Discount__3213E83FAD827C24");
+            entity.HasKey(e => e.Id).HasName("PK__Discount__3213E83FE48F9BFD");
 
             entity.ToTable("Discount");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Code)
                 .IsRequired()
                 .HasMaxLength(255);
@@ -218,13 +205,11 @@ public partial class EXE201Context : DbContext
 
         modelBuilder.Entity<Itinerary>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Itinerar__3213E83F6DEDD65D");
+            entity.HasKey(e => e.Id).HasName("PK__Itinerar__3213E83FCB05AC7C");
 
             entity.ToTable("Itinerary");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Date).HasColumnType("datetime");
             entity.Property(e => e.Description)
                 .IsRequired()
@@ -233,18 +218,16 @@ public partial class EXE201Context : DbContext
             entity.HasOne(d => d.Package).WithMany(p => p.Itineraries)
                 .HasForeignKey(d => d.PackageId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Itinerary__Packa__10566F31");
+                .HasConstraintName("FK__Itinerary__Packa__5EBF139D");
         });
 
         modelBuilder.Entity<Notification>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Notifica__3213E83FB75E44D7");
+            entity.HasKey(e => e.Id).HasName("PK__Notifica__3213E83F8CB46815");
 
             entity.ToTable("Notification");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Description)
                 .IsRequired()
                 .HasMaxLength(255);
@@ -255,18 +238,16 @@ public partial class EXE201Context : DbContext
             entity.HasOne(d => d.Account).WithMany(p => p.Notifications)
                 .HasForeignKey(d => d.AccountId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Notificat__Accou__114A936A");
+                .HasConstraintName("FK__Notificat__Accou__5FB337D6");
         });
 
         modelBuilder.Entity<Package>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Package__3213E83F31EFD24A");
+            entity.HasKey(e => e.Id).HasName("PK__Package__3213E83FB4E9CD64");
 
             entity.ToTable("Package");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Description)
                 .IsRequired()
                 .HasMaxLength(255);
@@ -277,44 +258,42 @@ public partial class EXE201Context : DbContext
             entity.HasOne(d => d.Account).WithMany(p => p.Packages)
                 .HasForeignKey(d => d.AccountId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Package__Account__123EB7A3");
+                .HasConstraintName("FK__Package__Account__60A75C0F");
 
             entity.HasOne(d => d.Destination).WithMany(p => p.Packages)
                 .HasForeignKey(d => d.DestinationId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Package__Destina__1332DBDC");
+                .HasConstraintName("FK__Package__Destina__619B8048");
         });
 
         modelBuilder.Entity<PackageService>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__PackageS__3213E83FB7166F0E");
+            entity.HasKey(e => e.Id).HasName("PK__PackageS__3213E83F440F70F5");
 
             entity.ToTable("PackageService");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
 
             entity.HasOne(d => d.Package).WithMany(p => p.PackageServices)
                 .HasForeignKey(d => d.PackageId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__PackageSe__Packa__14270015");
+                .HasConstraintName("FK__PackageSe__Packa__628FA481");
 
             entity.HasOne(d => d.Service).WithMany(p => p.PackageServices)
                 .HasForeignKey(d => d.ServiceId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__PackageSe__Servi__151B244E");
+                .HasConstraintName("FK__PackageSe__Servi__6383C8BA");
         });
 
         modelBuilder.Entity<Payment>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Payment__3214EC07E1E9AC2A");
+            entity.HasKey(e => e.Id).HasName("PK__Payment__3214EC0726C0156D");
 
             entity.ToTable("Payment");
 
-            entity.HasIndex(e => e.TransactionId, "UQ__Payment__55433A6AB0AA0C3E").IsUnique();
+            entity.HasIndex(e => e.TransactionId, "UQ__Payment__55433A6A5D001B7B").IsUnique();
 
-            entity.HasIndex(e => e.OrderCode, "UQ__Payment__999B52296E7ED43F").IsUnique();
+            entity.HasIndex(e => e.OrderCode, "UQ__Payment__999B5229D2741C1B").IsUnique();
 
             entity.Property(e => e.Amount).HasColumnType("decimal(18, 2)");
             entity.Property(e => e.CancelUrl).HasMaxLength(500);
@@ -347,13 +326,11 @@ public partial class EXE201Context : DbContext
 
         modelBuilder.Entity<Review>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Review__3213E83FE8C829A1");
+            entity.HasKey(e => e.Id).HasName("PK__Review__3213E83F6DC9346E");
 
             entity.ToTable("Review");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Comment)
                 .IsRequired()
                 .HasMaxLength(255);
@@ -362,23 +339,21 @@ public partial class EXE201Context : DbContext
             entity.HasOne(d => d.Account).WithMany(p => p.Reviews)
                 .HasForeignKey(d => d.AccountId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Review__AccountI__17036CC0");
+                .HasConstraintName("FK__Review__AccountI__656C112C");
 
             entity.HasOne(d => d.Package).WithMany(p => p.Reviews)
                 .HasForeignKey(d => d.PackageId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Review__PackageI__17F790F9");
+                .HasConstraintName("FK__Review__PackageI__66603565");
         });
 
         modelBuilder.Entity<Role>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Role__3213E83FC73764C6");
+            entity.HasKey(e => e.Id).HasName("PK__Role__3213E83F46D35BD1");
 
             entity.ToTable("Role");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Name)
                 .IsRequired()
                 .HasMaxLength(255);
@@ -386,13 +361,11 @@ public partial class EXE201Context : DbContext
 
         modelBuilder.Entity<Service>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Service__3213E83FA2F05129");
+            entity.HasKey(e => e.Id).HasName("PK__Service__3213E83F01EAD947");
 
             entity.ToTable("Service");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Description)
                 .IsRequired()
                 .HasMaxLength(255);

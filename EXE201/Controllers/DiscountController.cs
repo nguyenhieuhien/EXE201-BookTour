@@ -53,15 +53,15 @@ namespace EXE201.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Create(DiscountDTO discountDTO)
+        public async Task<ActionResult> Create(DiscountDTOCreate discountDTOCreate)
         {
             var discount = new Discount
             {
-                Id = discountDTO.Id,
-                Code = discountDTO.Code,
-                Percentage = discountDTO.Percentage,
-                ExpiryDate = discountDTO.ExpiryDate,
-                IsActive = discountDTO.IsActive,
+                //Id = discountDTO.Id,
+                Code = discountDTOCreate.Code,
+                Percentage = discountDTOCreate.Percentage,
+                ExpiryDate = discountDTOCreate.ExpiryDate,
+                IsActive = true,
             };
 
             await _discountService.AddDiscountAsync(discount);
@@ -69,7 +69,7 @@ namespace EXE201.Controllers
             return CreatedAtAction(nameof(GetById), new { id = discount.Id }, new
             {
                 Message = "Discount created successfully.",
-                Data = discountDTO
+                Data = discountDTOCreate
             });
         }
 

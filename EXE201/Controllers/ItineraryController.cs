@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using EXE201.Controllers.DTO.Itinerary;
-using EXE201.DTO;
 using EXE201.Models;
 using EXE201.Service.Interface;
 using Microsoft.AspNetCore.Mvc;
@@ -58,21 +57,21 @@ namespace EXE201.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Create(ItineraryDTO itineraryDTO)
+        public async Task<ActionResult> Create(ItineraryDTOCreate itineraryDTOCreate)
         {
-            var existingPackage = await _packageService.GetPackageByIdAsync(itineraryDTO.PackageId);
+            var existingPackage = await _packageService.GetPackageByIdAsync(itineraryDTOCreate.PackageId);
             if (existingPackage == null)
             {
-                return NotFound(new { Message = $"Package with ID {itineraryDTO.PackageId} was not found." });
+                return NotFound(new { Message = $"Package with ID {itineraryDTOCreate.PackageId} was not found." });
             }
 
             var itinerary = new Itinerary
             {
-                Id = itineraryDTO.Id,
-                PackageId = itineraryDTO.PackageId,
-                Date = itineraryDTO.Date,
-                Description = itineraryDTO.Description,
-                IsActive = itineraryDTO.IsActive,
+                //Id = itineraryDTO.Id,
+                PackageId = itineraryDTOCreate.PackageId,
+                Date = itineraryDTOCreate.Date,
+                Description = itineraryDTOCreate.Description,
+                IsActive = true,
             };
 
             await _itineraryService.AddItineraryAsync(itinerary);
@@ -80,7 +79,7 @@ namespace EXE201.Controllers
             return CreatedAtAction(nameof(GetById), new { id = itinerary.Id }, new
             {
                 Message = "Itinerary created successfully.",
-                Data = itineraryDTO
+                Data = itineraryDTOCreate
             });
         }
 

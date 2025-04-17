@@ -65,29 +65,29 @@ namespace EXE201.Controllers
 
 
         [HttpPost]
-        public async Task<ActionResult> Create(PackageDTO packageDTO)
+        public async Task<ActionResult> Create(PackageDTOCreate packageDTOCreate)
         {
-            var existingAccount = await _accountService.GetByIdAsync(packageDTO.AccountId);
-            var existingDestination = await _destinationService.GetDestinationByIdAsync(packageDTO.DestinationId);
+            var existingAccount = await _accountService.GetByIdAsync(packageDTOCreate.AccountId);
+            var existingDestination = await _destinationService.GetDestinationByIdAsync(packageDTOCreate.DestinationId);
             if (existingAccount == null)
             {
-                return NotFound(new { Message = $"Account with ID {packageDTO.AccountId} was not found." });
+                return NotFound(new { Message = $"Account with ID {packageDTOCreate.AccountId} was not found." });
             }
             if (existingDestination == null)
             {
-                return NotFound(new { Message = $"Destination with ID {packageDTO.AccountId} was not found." });
+                return NotFound(new { Message = $"Destination with ID {packageDTOCreate.AccountId} was not found." });
             }
 
             var package = new Package
             {
-                Id = packageDTO.Id,
-                AccountId = packageDTO.AccountId,
-                DestinationId = packageDTO.DestinationId,
-                Name = packageDTO.Name,
-                Description = packageDTO.Description,
-                Rating = packageDTO.Rating,
-                Price = packageDTO.Price,
-                IsActive = packageDTO.IsActive,
+                //Id = packageDTOCreate.Id,
+                AccountId = packageDTOCreate.AccountId,
+                DestinationId = packageDTOCreate.DestinationId,
+                Name = packageDTOCreate.Name,
+                Description = packageDTOCreate.Description,
+                Rating = packageDTOCreate.Rating,
+                Price = packageDTOCreate.Price,
+                IsActive = true,
             };
 
             await _packageService.AddPackageAsync(package);
@@ -95,7 +95,7 @@ namespace EXE201.Controllers
             return CreatedAtAction(nameof(GetById), new { id = package.Id }, new
             {
                 Message = "Package created successfully.",
-                Data = packageDTO
+                Data = packageDTOCreate
             });
         }
 

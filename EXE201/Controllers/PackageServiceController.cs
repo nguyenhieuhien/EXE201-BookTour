@@ -56,25 +56,25 @@ namespace EXE201.Controllers
             });
         }
         [HttpPost]
-        public async Task<ActionResult> Create(PackageServiceDTO packageServiceDTO)
+        public async Task<ActionResult> Create(PackageServiceDTOCreate packageServiceDTOCreate)
         {
-            var existingService = await _service.GetByIdAsync(packageServiceDTO.ServiceId);
-            var existingPackage = await _packageService.GetPackageByIdAsync(packageServiceDTO.PackageId);
+            var existingService = await _service.GetByIdAsync(packageServiceDTOCreate.ServiceId);
+            var existingPackage = await _packageService.GetPackageByIdAsync(packageServiceDTOCreate.PackageId);
             if (existingService == null)
             {
-                return NotFound(new { Message = $"Service with ID {packageServiceDTO.ServiceId} was not found." });
+                return NotFound(new { Message = $"Service with ID {packageServiceDTOCreate.ServiceId} was not found." });
             }
             if (existingPackage == null)
             {
-                return NotFound(new { Message = $"Package with ID {packageServiceDTO.PackageId} was not found." });
+                return NotFound(new { Message = $"Package with ID {packageServiceDTOCreate.PackageId} was not found." });
             }
             var packageService = new Models.PackageService
             {
-                Id = packageServiceDTO.Id,
-                PackageId = packageServiceDTO.PackageId,
-                ServiceId = packageServiceDTO.ServiceId,
-                Price = packageServiceDTO.Price,
-                IsActive = packageServiceDTO.IsActive
+                //Id = packageServiceDTO.Id,
+                PackageId = packageServiceDTOCreate.PackageId,
+                ServiceId = packageServiceDTOCreate.ServiceId,
+                Price = packageServiceDTOCreate.Price,
+                IsActive = true
             };
 
             await _packageServiceService.AddPackageServiceAsync(packageService);
@@ -82,7 +82,7 @@ namespace EXE201.Controllers
             return CreatedAtAction(nameof(GetById), new { id = packageService.Id }, new
             {
                 Message = "PackageService created successfully.",
-                Data = packageServiceDTO
+                Data = packageServiceDTOCreate
             });
         }
 

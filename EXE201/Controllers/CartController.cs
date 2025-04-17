@@ -56,19 +56,19 @@ namespace EXE201.Controllers
 
 
         [HttpPost]
-        public async Task<ActionResult> Create(CartDTO cartDTO)
+        public async Task<ActionResult> Create(CartDTOCreate cartDTOCreate)
         {
-            var existingAccount = await _accountService.GetByIdAsync(cartDTO.AccountId);
+            var existingAccount = await _accountService.GetByIdAsync(cartDTOCreate.AccountId);
             if (existingAccount == null)
             {
-                return NotFound(new { Message = $"Account with ID {cartDTO.AccountId} was not found." });
+                return NotFound(new { Message = $"Account with ID {cartDTOCreate.AccountId} was not found." });
             }
 
             var cart = new Cart
             {
-              Id= cartDTO.Id,
-              AccountId = cartDTO.AccountId,
-              IsActive = cartDTO.IsActive,
+              //Id= cartDTO.Id,
+              AccountId = cartDTOCreate.AccountId,
+              IsActive = true,
             };
 
             await _cartService.AddCartAsync(cart);
@@ -76,7 +76,7 @@ namespace EXE201.Controllers
             return CreatedAtAction(nameof(GetCartById), new { id = cart.Id }, new
             {
                 Message = "Cart created successfully.",
-                Data = cartDTO
+                Data = cartDTOCreate
             });
         }
 

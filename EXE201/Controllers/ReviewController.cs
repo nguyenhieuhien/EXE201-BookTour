@@ -68,32 +68,32 @@ namespace EXE201.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Create(ReviewDTO reviewDTO)
+        public async Task<ActionResult> Create(ReviewDTOCreate reviewDTOCreate)
         {
-            var existingAccount = await _accountService.GetByIdAsync(reviewDTO.AccountId);
-            var existingPackage = await _packageService.GetPackageByIdAsync(reviewDTO.PackageId);
+            var existingAccount = await _accountService.GetByIdAsync(reviewDTOCreate.AccountId);
+            var existingPackage = await _packageService.GetPackageByIdAsync(reviewDTOCreate.PackageId);
             if (existingAccount == null)
             {
-                return NotFound(new { Message = $"Account with ID {reviewDTO.AccountId} was not found." });
+                return NotFound(new { Message = $"Account with ID {reviewDTOCreate.AccountId} was not found." });
             }
             if (existingPackage == null)
             {
-                return NotFound(new { Message = $"Package with ID {reviewDTO.PackageId} was not found." });
+                return NotFound(new { Message = $"Package with ID {reviewDTOCreate.PackageId} was not found." });
             }
-            if (reviewDTO.Rating < 1 || reviewDTO.Rating > 5)
+            if (reviewDTOCreate.Rating < 1 || reviewDTOCreate.Rating > 5)
             {
                 return BadRequest(new { Message = "Rating must be between 1 and 5." });
             }
 
             var review = new Review
             {
-                Id = reviewDTO.Id,
-                AccountId = reviewDTO.AccountId,
-                PackageId = reviewDTO.PackageId,
-                Rating = reviewDTO.Rating,
-                Comment = reviewDTO.Comment,
-                CreateDate = (DateTime)reviewDTO.CreateDate, // Chuyển từ DateTime sang DateOnly
-                IsActive = reviewDTO.IsActive,
+                //Id = reviewDTOCreate.Id,
+                AccountId = reviewDTOCreate.AccountId,
+                PackageId = reviewDTOCreate.PackageId,
+                Rating = reviewDTOCreate.Rating,
+                Comment = reviewDTOCreate.Comment,
+                CreateDate = (DateTime)reviewDTOCreate.CreateDate, // Chuyển từ DateTime sang DateOnly
+                IsActive = true,
             };
 
             await _reviewService.AddReviewAsync(review);
@@ -101,7 +101,7 @@ namespace EXE201.Controllers
             return CreatedAtAction(nameof(GetById), new { id = review.Id }, new
             {
                 Message = "Review created successfully.",
-                Data = reviewDTO
+                Data = reviewDTOCreate
             });
         }
 

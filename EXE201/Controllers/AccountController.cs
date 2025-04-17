@@ -60,12 +60,12 @@ namespace EXE201.Controllers
         [HttpPost]
         public async Task<ActionResult> Create(AccountDTOCreate accountDTOCreate)
         {
-            var existingAccount = await _accountService.GetByIdAsync(accountDTOCreate.Id);
+            //var existingAccount = await _accountService.GetByIdAsync(accountDTOCreate.Id);
             var existingUsername = await _accountService.GetByNameAsync(accountDTOCreate.UserName);
-            if (existingAccount != null)
-            {
-                return Conflict(new { Message = $"Account with ID {accountDTOCreate.Id} was found." });
-            }
+            //if (existingAccount != null)
+            //{
+            //    return Conflict(new { Message = $"Account with ID {accountDTOCreate.Id} was found." });
+            //}
 
             if (existingUsername != null)
             {
@@ -75,7 +75,7 @@ namespace EXE201.Controllers
 
             var account = new Account
             {
-                Id = accountDTOCreate.Id,
+                //Id = accountDTOCreate.Id,
                 RoleId = 3,
                 UserName = accountDTOCreate.UserName,
                 Password = accountDTOCreate.Password,

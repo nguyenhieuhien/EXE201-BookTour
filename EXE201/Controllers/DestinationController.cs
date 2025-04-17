@@ -53,15 +53,15 @@ namespace EXE201.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Create(DestinationDTO destinationDTO)
+        public async Task<ActionResult> Create(DestinationDTOCreate destinationDTOCreate)
         {
             var destination = new Destination
             {
-                Id = destinationDTO.Id,
-                Name = destinationDTO.Name,
-                Description = destinationDTO.Description,
-                Location = destinationDTO.Location,
-                IsActive = destinationDTO.IsActive,
+                //Id = destinationDTO.Id,
+                Name = destinationDTOCreate.Name,
+                Description = destinationDTOCreate.Description,
+                Location = destinationDTOCreate.Location,
+                IsActive = true,
             };
 
             await _destinationService.AddDestinationAsync(destination);
@@ -69,7 +69,7 @@ namespace EXE201.Controllers
             return CreatedAtAction(nameof(GetById), new { id = destination.Id }, new
             {
                 Message = "Destination created successfully.",
-                Data = destinationDTO
+                Data = destinationDTOCreate
             });
         }
 

@@ -1,6 +1,5 @@
 ﻿
-using EXE201.DTO;
-
+using EXE201.Controllers.DTO.Booking;
 using EXE201.Models;
 using EXE201.Service.Interface;
 using Microsoft.AspNetCore.Mvc;
@@ -34,42 +33,41 @@ namespace EXE201.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] BookingDTO bookingDto)
+        public async Task<IActionResult> Create([FromBody] BookingDTOCreate bookingDtoCreate)
         {
-            if (bookingDto == null) return BadRequest("Invalid booking data.");
+            if (bookingDtoCreate == null) return BadRequest("Invalid booking data.");
 
             var booking = new Booking
-            {   Id = bookingDto.Id,
-                AccountId = bookingDto.AccountId,
-                DiscountId = bookingDto.DiscountId,
-                Description = bookingDto.Description,
-                BookingDate = bookingDto.BookingDate,
-                TotalPrice = bookingDto.TotalPrice,
-                Status = bookingDto.Status,
+            {   
+                //Id = bookingDto.Id,
+                AccountId = bookingDtoCreate.AccountId,
+                DiscountId = bookingDtoCreate.DiscountId,
+                Description = bookingDtoCreate.Description,
+                BookingDate = bookingDtoCreate.BookingDate,
+                TotalPrice = bookingDtoCreate.TotalPrice,
+                Status = bookingDtoCreate.Status,
                 IsActive = true // Defaulting IsActive to true when creating a booking
             };
 
             await _bookingService.AddBooking(booking);
-            return CreatedAtAction(nameof(GetById), new { id = booking.Id }, bookingDto);
+            return CreatedAtAction(nameof(GetById), new { id = booking.Id }, bookingDtoCreate);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(long id, [FromBody] BookingDTO bookingDto)
+        public async Task<IActionResult> Update(long id, [FromBody] BookingDTOUpdate bookingDtoUpdate)
         {
-            if (bookingDto == null || id != bookingDto.Id) return BadRequest("Invalid booking data.");
+            if (bookingDtoUpdate == null) return BadRequest("Invalid booking data.");
 
             var existingBooking = await _bookingService.GetBookingById(id);
             if (existingBooking == null) return NotFound("Booking not found.");
 
             var booking = new Booking
             {
-                Id = bookingDto.Id,
-                AccountId = bookingDto.AccountId,
-                DiscountId = bookingDto.DiscountId,
-                Description = bookingDto.Description,
-                BookingDate = bookingDto.BookingDate,
-                TotalPrice = bookingDto.TotalPrice,
-                Status = bookingDto.Status,
+                //Id = bookingDto.Id,
+                Description = bookingDtoUpdate.Description,
+                BookingDate = bookingDtoUpdate.BookingDate,
+                TotalPrice = bookingDtoUpdate.TotalPrice,
+                Status = bookingDtoUpdate.Status,
                 IsActive = true // Assuming it remains active when updating
             };
 

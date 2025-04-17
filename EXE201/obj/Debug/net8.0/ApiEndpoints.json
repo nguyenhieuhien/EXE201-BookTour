@@ -117,8 +117,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "bookingDetailDto",
-        "Type": "EXE201.Controllers.DTO.BookingDetailDTO",
+        "Name": "bookingDetailDtoCreate",
+        "Type": "EXE201.Controllers.DTO.BookingDetail.BookingDetailDTOCreate",
         "IsRequired": true
       }
     ],
@@ -154,8 +154,8 @@
         "IsRequired": true
       },
       {
-        "Name": "bookingDetailDto",
-        "Type": "EXE201.Controllers.DTO.BookingDetailDTO",
+        "Name": "bookingDetailDtoUpdate",
+        "Type": "EXE201.Controllers.DTO.BookingDetail.BookingDetailDTOUpdate",
         "IsRequired": true
       }
     ],
@@ -196,8 +196,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "bookingDto",
-        "Type": "EXE201.DTO.BookingDTO",
+        "Name": "bookingDtoCreate",
+        "Type": "EXE201.Controllers.DTO.Booking.BookingDTOCreate",
         "IsRequired": true
       }
     ],
@@ -233,8 +233,8 @@
         "IsRequired": true
       },
       {
-        "Name": "bookingDto",
-        "Type": "EXE201.DTO.BookingDTO",
+        "Name": "bookingDtoUpdate",
+        "Type": "EXE201.Controllers.DTO.Booking.BookingDTOUpdate",
         "IsRequired": true
       }
     ],
@@ -265,8 +265,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "cartDTO",
-        "Type": "EXE201.Controllers.DTO.Cart.CartDTO",
+        "Name": "cartDTOCreate",
+        "Type": "EXE201.Controllers.DTO.Cart.CartDTOCreate",
         "IsRequired": true
       }
     ],
@@ -323,8 +323,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "cartItemDTO",
-        "Type": "EXE201.Controllers.DTO.CartItem.CartItemDTO",
+        "Name": "cartItemDTOCreate",
+        "Type": "EXE201.Controllers.DTO.CartItem.CartItemDTOCreate",
         "IsRequired": true
       }
     ],
@@ -448,8 +448,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "destinationDTO",
-        "Type": "EXE201.Controllers.DTO.Destination.DestinationDTO",
+        "Name": "destinationDTOCreate",
+        "Type": "EXE201.Controllers.DTO.Destination.DestinationDTOCreate",
         "IsRequired": true
       }
     ],
@@ -547,8 +547,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "discountDTO",
-        "Type": "EXE201.Controllers.DTO.Discount.DiscountDTO",
+        "Name": "discountDTOCreate",
+        "Type": "EXE201.Controllers.DTO.Discount.DiscountDTOCreate",
         "IsRequired": true
       }
     ],
@@ -646,8 +646,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "itineraryDTO",
-        "Type": "EXE201.Controllers.DTO.Itinerary.ItineraryDTO",
+        "Name": "itineraryDTOCreate",
+        "Type": "EXE201.Controllers.DTO.Itinerary.ItineraryDTOCreate",
         "IsRequired": true
       }
     ],
@@ -745,8 +745,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "notificationDTO",
-        "Type": "EXE201.Controllers.DTO.Notification.NotificationDTO",
+        "Name": "notificationDTOCreate",
+        "Type": "EXE201.Controllers.DTO.Notification.NotificationDTOCreate",
         "IsRequired": true
       }
     ],
@@ -844,8 +844,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "packageDTO",
-        "Type": "EXE201.Controllers.DTO.Package.PackageDTO",
+        "Name": "packageDTOCreate",
+        "Type": "EXE201.Controllers.DTO.Package.PackageDTOCreate",
         "IsRequired": true
       }
     ],
@@ -943,8 +943,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "packageServiceDTO",
-        "Type": "EXE201.Controllers.DTO.PackageService.PackageServiceDTO",
+        "Name": "packageServiceDTOCreate",
+        "Type": "EXE201.Controllers.DTO.PackageService.PackageServiceDTOCreate",
         "IsRequired": true
       }
     ],
@@ -1062,8 +1062,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "reviewDTO",
-        "Type": "EXE201.Controllers.DTO.Review.ReviewDTO",
+        "Name": "reviewDTOCreate",
+        "Type": "EXE201.Controllers.DTO.Review.ReviewDTOCreate",
         "IsRequired": true
       }
     ],
@@ -1161,8 +1161,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "serviceDTO",
-        "Type": "EXE201.Controllers.DTO.Service.ServiceDTO",
+        "Name": "serviceDTOCreate",
+        "Type": "EXE201.Controllers.DTO.Service.ServiceDTOCreate",
         "IsRequired": true
       }
     ],
