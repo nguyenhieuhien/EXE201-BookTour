@@ -47,7 +47,7 @@ namespace EXE201.Controllers
                 DiscountId = bookingDtoCreate.DiscountId,
                 Description = bookingDtoCreate.Description,
                 BookingDate = bookingDtoCreate.BookingDate,
-                TotalPrice = bookingDtoCreate.TotalPrice,
+                TotalPrice = 0,
                 Status = bookingDtoCreate.Status,
                 IsActive = true 
             };

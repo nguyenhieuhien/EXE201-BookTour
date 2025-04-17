@@ -57,8 +57,7 @@ namespace EXE201.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(BookingDetailDTOCreate bookingDetailDtoCreate)
         {
-            //if (bookingDetailDtoCreate == null) 
-            //    return BadRequest("Invalid booking detail data.");
+           
 
             var bookingDetail = new BookingDetail
              { 

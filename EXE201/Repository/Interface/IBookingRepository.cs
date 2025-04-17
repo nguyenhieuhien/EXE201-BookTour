@@ -10,6 +10,7 @@ namespace EXE201.Repository.Interface
         Task<IEnumerable<BookingDTO>> GetAllBookings();
         Task<BookingDTO?> GetBookingById(long id);
         Task AddBooking(Booking booking);
+        Task RecalculateTotalPriceAsync(long bookingId);
         Task UpdateBooking(Booking booking);
         Task DeleteBooking(long id);
     }

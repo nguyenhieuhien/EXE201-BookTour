@@ -25,6 +25,10 @@ namespace EXE201.Service
         {
             return await _bookingRepository.GetBookingById(id);
         }
+        public async Task RecalculateTotalPriceAsync(long bookingId)
+        {
+            await _bookingRepository.RecalculateTotalPriceAsync(bookingId);
+        }
 
         public async Task AddBooking(Booking booking)
         {

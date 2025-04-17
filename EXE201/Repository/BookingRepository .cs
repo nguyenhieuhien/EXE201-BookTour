@@ -56,6 +56,33 @@ namespace EXE201.Repositories
             await _context.SaveChangesAsync();
         }
 
+        public async Task RecalculateTotalPriceAsync(long bookingId)
+        {
+            var booking = await _context.Bookings.FindAsync(bookingId);
+            if (booking == null) return;
+
+            var bookingDetails = await _context.BookingDetails
+                .Where(bd => bd.BookingId == bookingId && bd.IsActive)
+                .ToListAsync();
+
+            if (bookingDetails == null || !bookingDetails.Any()) return;
+
+            decimal total = 0;
+            foreach (var detail in bookingDetails)
+            {
+                var package = await _context.Packages.FindAsync(detail.PackageId);
+                if (package != null && package.IsActive)
+                {
+                    total += (decimal)package.Price;
+                }
+            }
+
+            booking.TotalPrice = (double)total;
+
+            _context.Bookings.Update(booking);
+            await _context.SaveChangesAsync();
+        }
+
         public async Task UpdateBooking(Booking booking)
         {
             _context.Bookings.Update(booking);
