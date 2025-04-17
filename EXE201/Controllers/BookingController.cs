@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EXE201.Controllers
 {
+    /// <summary>
+    /// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Chua sua
+    /// </summary>
     [ApiController]
     [Route("api/bookings")]
     public class BookingController : ControllerBase
@@ -35,7 +38,7 @@ namespace EXE201.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] BookingDTOCreate bookingDtoCreate)
         {
-            if (bookingDtoCreate == null) return BadRequest("Invalid booking data.");
+            //if (bookingDtoCreate == null) return BadRequest("Invalid booking data.");
 
             var booking = new Booking
             {   
@@ -46,7 +49,7 @@ namespace EXE201.Controllers
                 BookingDate = bookingDtoCreate.BookingDate,
                 TotalPrice = bookingDtoCreate.TotalPrice,
                 Status = bookingDtoCreate.Status,
-                IsActive = true // Defaulting IsActive to true when creating a booking
+                IsActive = true 
             };
 
             await _bookingService.AddBooking(booking);
@@ -56,7 +59,7 @@ namespace EXE201.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(long id, [FromBody] BookingDTOUpdate bookingDtoUpdate)
         {
-            if (bookingDtoUpdate == null) return BadRequest("Invalid booking data.");
+            //if (bookingDtoUpdate == null) return BadRequest("Invalid booking data.");
 
             var existingBooking = await _bookingService.GetBookingById(id);
             if (existingBooking == null) return NotFound("Booking not found.");

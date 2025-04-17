@@ -55,30 +55,30 @@ namespace EXE201.Controllers
 
 
 
-        [HttpPost]
-        public async Task<ActionResult> Create(CartDTOCreate cartDTOCreate)
-        {
-            var existingAccount = await _accountService.GetByIdAsync(cartDTOCreate.AccountId);
-            if (existingAccount == null)
-            {
-                return NotFound(new { Message = $"Account with ID {cartDTOCreate.AccountId} was not found." });
-            }
+        //[HttpPost]
+        //public async Task<ActionResult> Create(CartDTOCreate cartDTOCreate)
+        //{
+        //    var existingAccount = await _accountService.GetByIdAsync(cartDTOCreate.AccountId);
+        //    if (existingAccount == null)
+        //    {
+        //        return NotFound(new { Message = $"Account with ID {cartDTOCreate.AccountId} was not found." });
+        //    }
 
-            var cart = new Cart
-            {
-              //Id= cartDTO.Id,
-              AccountId = cartDTOCreate.AccountId,
-              IsActive = true,
-            };
+        //    var cart = new Cart
+        //    {
+        //      //Id= cartDTO.Id,
+        //      AccountId = cartDTOCreate.AccountId,
+        //      IsActive = true,
+        //    };
 
-            await _cartService.AddCartAsync(cart);
+        //    await _cartService.AddCartAsync(cart);
 
-            return CreatedAtAction(nameof(GetCartById), new { id = cart.Id }, new
-            {
-                Message = "Cart created successfully.",
-                Data = cartDTOCreate
-            });
-        }
+        //    return CreatedAtAction(nameof(GetCartById), new { id = cart.Id }, new
+        //    {
+        //        Message = "Cart created successfully.",
+        //        Data = cartDTOCreate
+        //    });
+        //}
 
         //[HttpPut("{id}")]
         //public async Task<ActionResult> Update(long id, ReviewDTOUpdate reviewDTOUpdate)
@@ -115,24 +115,24 @@ namespace EXE201.Controllers
         //    });
         //}
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(long id)
-        {
-            var existingCart = await _cartService.GetCartByIdAsync(id);
-            if (existingCart == null)
+        //[HttpDelete("{id}")]
+        //public async Task<IActionResult> Delete(long id)
+        //{
+        //    var existingCart = await _cartService.GetCartByIdAsync(id);
+        //    if (existingCart == null)
 
-                return NotFound(new { Message = $"No Cart found with ID {id}." });
-            await _cartService.DeleteCartAsync(id);
-            return Ok(new
-            {
-                Message = $"Cart with ID {id} has been deleted successfully.",
-                Data = new
-                {
-                   Id = existingCart.Id,
-                   AccountId =existingCart.AccountId,
-                   IsActive = existingCart.IsActive,
-                }
-            });
-        }
+        //        return NotFound(new { Message = $"No Cart found with ID {id}." });
+        //    await _cartService.DeleteCartAsync(id);
+        //    return Ok(new
+        //    {
+        //        Message = $"Cart with ID {id} has been deleted successfully.",
+        //        Data = new
+        //        {
+        //           Id = existingCart.Id,
+        //           AccountId =existingCart.AccountId,
+        //           IsActive = existingCart.IsActive,
+        //        }
+        //    });
+        //}
     }
 }

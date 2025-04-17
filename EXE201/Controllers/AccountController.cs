@@ -1,5 +1,6 @@
 ﻿using EXE201.Controllers.DTO.Account;
 using EXE201.Models;
+using EXE201.Service;
 using EXE201.Service.Interface;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,10 +12,12 @@ namespace EXE201.Controllers
     {
   
         private readonly IAccountService _accountService;
+        private readonly ICartService _cartService;
 
-        public AccountsController(IAccountService accountService)
+        public AccountsController(IAccountService accountService ,ICartService cartService)
         {
             _accountService = accountService;
+            _cartService = cartService;
         }
 
 
@@ -85,6 +88,15 @@ namespace EXE201.Controllers
             };
 
             await _accountService.AddAsync(account);
+
+            ///////////////////////////////////////////
+          
+            var cart = new Cart
+            {
+                AccountId = account.Id,
+                IsActive = true
+            };
+            await _cartService.AddCartAsync(cart);
 
             return CreatedAtAction(nameof(GetById), new { id = account.Id }, new
             {
