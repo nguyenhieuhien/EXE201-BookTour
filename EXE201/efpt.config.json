@@ -47,6 +47,10 @@
          "ObjectType": 0
       },
       {
+         "Name": "[dbo].[News]",
+         "ObjectType": 0
+      },
+      {
          "Name": "[dbo].[Notification]",
          "ObjectType": 0
       },

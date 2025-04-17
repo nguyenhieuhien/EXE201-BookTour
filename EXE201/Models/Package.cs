@@ -23,6 +23,8 @@ public partial class Package
 
     public bool IsActive { get; set; }
 
+    public string PictureUrl { get; set; }
+
     public virtual Account Account { get; set; }
 
     public virtual ICollection<BookingDetail> BookingDetails { get; set; } = new List<BookingDetail>();

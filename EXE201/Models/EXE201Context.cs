@@ -33,6 +33,8 @@ public partial class EXE201Context : DbContext
 
     public virtual DbSet<Itinerary> Itineraries { get; set; }
 
+    public virtual DbSet<News> News { get; set; }
+
     public virtual DbSet<Notification> Notifications { get; set; }
 
     public virtual DbSet<Package> Packages { get; set; }
@@ -62,7 +64,7 @@ public partial class EXE201Context : DbContext
         => optionsBuilder.UseSqlServer(GetConnectionString("DefaultConnection")).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
     //    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-    //        => optionsBuilder.UseSqlServer("Data Source=LAPTOP-990UPKS6;Initial Catalog=EXE201;Persist Security Info=True;User ID=sa;Password=12345");
+    //        => optionsBuilder.UseSqlServer("Data Source=LAPTOP-990UPKS6;Initial Catalog=EXE201;User ID=sa;Password=12345");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -210,15 +212,30 @@ public partial class EXE201Context : DbContext
             entity.ToTable("Itinerary");
 
             entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.Date).HasColumnType("datetime");
             entity.Property(e => e.Description)
                 .IsRequired()
                 .HasMaxLength(255);
+            entity.Property(e => e.EndDate).HasColumnType("datetime");
+            entity.Property(e => e.StartDate).HasColumnType("datetime");
 
             entity.HasOne(d => d.Package).WithMany(p => p.Itineraries)
                 .HasForeignKey(d => d.PackageId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Itinerary__Packa__5EBF139D");
+        });
+
+        modelBuilder.Entity<News>(entity =>
+        {
+            entity.HasKey(e => e.NewsId).HasName("PK__News__954EBDF38718DCC7");
+
+            entity.Property(e => e.PictureUrl).HasMaxLength(500);
+            entity.Property(e => e.Summary).HasMaxLength(500);
+            entity.Property(e => e.Title)
+                .IsRequired()
+                .HasMaxLength(255);
+            entity.Property(e => e.Url)
+                .IsRequired()
+                .HasMaxLength(255);
         });
 
         modelBuilder.Entity<Notification>(entity =>
@@ -254,6 +271,7 @@ public partial class EXE201Context : DbContext
             entity.Property(e => e.Name)
                 .IsRequired()
                 .HasMaxLength(255);
+            entity.Property(e => e.PictureUrl).HasMaxLength(500);
 
             entity.HasOne(d => d.Account).WithMany(p => p.Packages)
                 .HasForeignKey(d => d.AccountId)

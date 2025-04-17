@@ -31,7 +31,8 @@ namespace EXE201.Controllers
                 {
                     Id = itinerary.Id,
                     PackageId = itinerary.PackageId,
-                    Date = itinerary.Date,
+                    StartDate = itinerary.StartDate,
+                    EndDate = itinerary.EndDate,
                     Description = itinerary.Description,
                     IsActive = itinerary.IsActive,
                 });
@@ -50,7 +51,8 @@ namespace EXE201.Controllers
             {
                 Id = itinerary.Id,
                 PackageId = itinerary.PackageId,
-                Date = itinerary.Date,
+                StartDate = itinerary.StartDate,
+                EndDate = itinerary.EndDate,
                 Description = itinerary.Description,
                 IsActive = itinerary.IsActive,
             });
@@ -69,7 +71,8 @@ namespace EXE201.Controllers
             {
                 //Id = itineraryDTO.Id,
                 PackageId = itineraryDTOCreate.PackageId,
-                Date = itineraryDTOCreate.Date,
+                StartDate = itineraryDTOCreate.StartDate,
+                EndDate = itineraryDTOCreate.EndDate,
                 Description = itineraryDTOCreate.Description,
                 IsActive = true,
             };
@@ -92,7 +95,8 @@ namespace EXE201.Controllers
                 return NotFound(new { Message = $"No Itinerary found with ID {id}." });
             }
 
-            existingItinerary.Date = itineraryDTOUpdate.Date;
+            existingItinerary.StartDate = itineraryDTOUpdate.StartDate;
+            existingItinerary.EndDate = itineraryDTOUpdate.EndDate;
             existingItinerary.Description = itineraryDTOUpdate.Description;
 
             await _itineraryService.UpdateItineraryAsync(existingItinerary);
@@ -104,7 +108,8 @@ namespace EXE201.Controllers
                 {
                     Id = existingItinerary.Id,
                     PackageId = existingItinerary.PackageId,
-                    Date = existingItinerary.Date,
+                    StartDate = existingItinerary.StartDate,
+                    EndDate = existingItinerary.EndDate,
                     Description = existingItinerary.Description,
                     IsActive = existingItinerary.IsActive,
                 }
@@ -128,7 +133,8 @@ namespace EXE201.Controllers
                 {
                     Id = existingItinerary.Id,
                     PackageId = existingItinerary.PackageId,
-                    Date = existingItinerary.Date,
+                    StartDate = existingItinerary.StartDate,
+                    EndDate = existingItinerary.EndDate,
                     Description = existingItinerary.Description,
                     IsActive = existingItinerary.IsActive,
                 }

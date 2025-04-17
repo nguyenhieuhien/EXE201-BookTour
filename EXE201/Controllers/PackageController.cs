@@ -36,6 +36,7 @@ namespace EXE201.Controllers
                     Description = package.Description,
                     Rating = package.Rating,
                     Price = package.Price,
+                    PictureUrl = package.PictureUrl,
                     IsActive = package.IsActive,
                 });
             }
@@ -59,6 +60,7 @@ namespace EXE201.Controllers
                 Description = package.Description,
                 Rating = package.Rating,
                 Price = package.Price,
+                PictureUrl = package.PictureUrl,
                 IsActive = package.IsActive,
             });
         }
@@ -87,6 +89,7 @@ namespace EXE201.Controllers
                 Description = packageDTOCreate.Description,
                 Rating = packageDTOCreate.Rating,
                 Price = packageDTOCreate.Price,
+                PictureUrl = packageDTOCreate.PictureUrl,
                 IsActive = true,
             };
 
@@ -113,6 +116,7 @@ namespace EXE201.Controllers
             existingPackage.Description = packageDTOUpdate.Description;
             existingPackage.Rating = packageDTOUpdate.Rating;
             existingPackage.Price = packageDTOUpdate.Price;
+            existingPackage.PictureUrl = packageDTOUpdate.PictureUrl;
 
             await _packageService.UpdatePackageAsync(existingPackage);
 
@@ -128,6 +132,7 @@ namespace EXE201.Controllers
                     Description = existingPackage.Description,
                     Rating = existingPackage.Rating,
                     Price = existingPackage.Price,
+                    PictureUrl = existingPackage.PictureUrl,
                     IsActive = existingPackage.IsActive,
                 }
             });
@@ -155,6 +160,7 @@ namespace EXE201.Controllers
                     Description = existingPackage.Description,
                     Rating = existingPackage.Rating,
                     Price = existingPackage.Price,
+                    PictureUrl = existingPackage.PictureUrl,
                     IsActive = existingPackage.IsActive,
                 }
             });

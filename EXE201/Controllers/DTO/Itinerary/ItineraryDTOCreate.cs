@@ -3,7 +3,8 @@
     public class ItineraryDTOCreate
     {
         public long PackageId { get; set; }
-        public DateTime Date { get; set; }
-        public string Description { get; set; } = null!;
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Description { get; set; }
     }
 }
