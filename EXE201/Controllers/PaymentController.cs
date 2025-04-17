@@ -39,10 +39,10 @@ namespace EXE201.Controllers
             var paymentData = new PaymentData(
              orderCode: customOrderCode,
              amount: (int)booking.TotalPrice,
-             description: $"Thanh toán Booking {booking.Description}",
+             description: $"Thanh toán Booking {booking.Id}",
              items: items,
-             cancelUrl: "https://www.youtube.com",
-             returnUrl: "https://www.facebook.com/NguyenHieuHien.Profile"
+             cancelUrl: "https://dalattour.vercel.app/",
+             returnUrl: "https://dalattour.vercel.app/"
              );
 
             var createPayment = await _payOS.createPaymentLink(paymentData);
