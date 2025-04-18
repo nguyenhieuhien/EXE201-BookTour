@@ -52,6 +52,8 @@ namespace EXE201
             builder.Services.AddScoped<ICartItemService, CartItemService>();
             builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
             builder.Services.AddScoped<IPaymentService, PaymentService>();
+            builder.Services.AddScoped<INewsRepository, NewsRepository>();
+            builder.Services.AddScoped<INewsService, NewsService>();
             ///?????????????????????
             builder.Services.AddDbContext<EXE201Context>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

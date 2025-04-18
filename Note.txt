@@ -1,0 +1,46 @@
+*Account:
+	roleid 1 = admin , 3 = customer
+	tạo account sẽ tự tạo cart
+
+*CartItem:
+	Đã để sẵn get allCartItem bằng CartId (để làm giỏ hàng)
+
+*Destination:
+	- tạo sẵn 1 cái name: Đà Lạt r để đó , thằng khác gọi ra thôi
+
+*Discount:
+	-Đã bỏ , ko xài
+
+*Itinerary:
+	 lịch trình của package: start date + enddate
+
+*News: 
+
+	đã có getall , getbyid
+
+*Notification: vứt
+
+*Package:
+	price trong package là tổng giá tất cả các service trong package đó dựa theo table n-n là packageservice
+
+*PackageService
+	đơn giản là table thể hiện mối quan hệ n-n của package với service
+	price trong PackageService là price của chính service đang đối chiếu
+
+*Service
+	ko có gì hot , chỉ là service crud thôi
+
+*review
+	account review package
+
+*Payment:
+	tạo link payos thanh toán dựa theo bookingId
+        nhớ , thanh toán thành công hay hủy đều phải gọi api phụ tên ConfirmPayOsTransaction để sửa status của payment và booking về trạng thái của nó chứ ko để PENDING
+
+*Booking:
+	DiscountId đã fix code cứng , ko cần tạo cũng như ko cần nhập , vì đã có thể null khi tạo
+	Totalprice của booking là tổng giá của tất cả các package đang định mua được thể hiện trong table booking_Detail
+
+*Booking_Detail
+	  
+	Hiểu đơn giản nhất là table quan hệ n-n của booking với package giống y thằng packageservice

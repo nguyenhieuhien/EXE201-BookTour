@@ -38,20 +38,16 @@ namespace EXE201.Controllers
             });
         }
 
-        //[HttpGet("{accountId}")]
-        //public async Task<ActionResult<CartDTO>> GetCartByAccountId(long accountId)
-        //{
-        //    var cart = await _cartService.GetCartsByAccountIdAsync(accountId);
-        //    if (cart == null)
-        //        return NotFound(new { Message = $"Cart with account ID {accountId} was not found." });
-
-        //    return Ok(new CartDTO
-        //    {
-        //        Id = cart.Id,
-        //        AccountId = cart.AccountId,
-        //        IsActive = cart.IsActive,
-        //    });
-        //}
+        [HttpGet("account/{accountId}")]
+        public async Task<ActionResult<IEnumerable<Cart>>> GetCartsByAccountId(long accountId)
+        {
+            var carts = await _cartService.GetCartsByAccountIdAsync(accountId);
+            if (carts == null || !carts.Any())
+            {
+                return NotFound("No carts found for the given account.");
+            }
+            return Ok(carts);
+        }
 
 
 
