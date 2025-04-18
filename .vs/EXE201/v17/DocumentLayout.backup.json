@@ -3,56 +3,128 @@
   "WorkspaceRootPath": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\repository\\interface\\ibookingdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\repository\\interface\\ibookingdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\service\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\service\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\repository\\interface\\ireviewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\repository\\interface\\ireviewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\repository\\interface\\ipaymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\repository\\interface\\ipaymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\repository\\paymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\repository\\paymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\service\\interface\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\service\\interface\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\service\\packageserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\service\\packageserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\service\\serviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\service\\serviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\models\\exe201context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\models\\exe201context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\repository\\packageservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\repository\\packageservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\repository\\interface\\ibookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\repository\\interface\\ibookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\repository\\bookingrepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\repository\\bookingrepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\repository\\bookingdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\repository\\bookingdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\repository\\reviewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\repository\\reviewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\service\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\service\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\service\\bookingdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\service\\bookingdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\repository\\bookingrepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\repository\\bookingrepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\service\\reviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\service\\reviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\service\\packageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\service\\packageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\controllers\\packagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\controllers\\packagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\repository\\interface\\ipackageservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\repository\\interface\\ipackageservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\service\\interface\\ibookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\service\\interface\\ibookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\service\\interface\\ibookingdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\service\\interface\\ibookingdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\repository\\packagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\repository\\packagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\repository\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\repository\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\controllers\\packageservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\controllers\\packageservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\controllers\\bookingdetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\controllers\\bookingdetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\repository\\packagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\repository\\packagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\repository\\bookingdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\repository\\bookingdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\repository\\packageservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\repository\\packageservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\service\\interface\\ibookingdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\service\\interface\\ibookingdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\repository\\interface\\ibookingdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\repository\\interface\\ibookingdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\service\\bookingdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\service\\bookingdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\repository\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\repository\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\repository\\interface\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -73,22 +145,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\repository\\interface\\ipackagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\repository\\interface\\ipackagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\controllers\\packagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\controllers\\packagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\repository\\interface\\ipackageservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\repository\\interface\\ipackageservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\service\\packageserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\service\\packageserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\controllers\\packageservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\controllers\\packageservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\repository\\interface\\icartitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -115,10 +171,6 @@
       "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\controllers\\dto\\service\\servicedtocreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\controllers\\cartitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\controllers\\cartitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -143,18 +195,6 @@
       "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\service\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\models\\bookingdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\models\\bookingdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\controllers\\discountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\controllers\\discountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -169,10 +209,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\controllers\\dto\\bookingdetail\\bookingdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\controllers\\dto\\bookingdetail\\bookingdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -207,14 +243,6 @@
       "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\controllers\\dto\\cart\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\models\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\models\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|c:\\users\\karsa\\desktop\\github\\exe201-booktour\\exe201\\controllers\\itinerarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{433B6B86-C042-465C-83A0-2FC4D4496B6B}|EXE201\\EXE201.csproj|solutionrelative:exe201\\controllers\\itinerarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -226,21 +254,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 9,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BookingService.cs",
-              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\BookingService.cs",
-              "RelativeDocumentMoniker": "EXE201\\Service\\BookingService.cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\BookingService.cs*",
-              "RelativeToolTip": "EXE201\\Service\\BookingService.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T16:57:34.935Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -272,89 +287,284 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "BookingDetailRepository.cs",
-              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\BookingDetailRepository.cs",
-              "RelativeDocumentMoniker": "EXE201\\Repository\\BookingDetailRepository.cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\BookingDetailRepository.cs*",
-              "RelativeToolTip": "EXE201\\Repository\\BookingDetailRepository.cs*",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAowCsAAAAAAAAAAAAAAA==",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\appsettings.json",
+              "RelativeDocumentMoniker": "EXE201\\appsettings.json",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\appsettings.json",
+              "RelativeToolTip": "EXE201\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-18T08:09:36.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Models\\Payment.cs",
+              "RelativeDocumentMoniker": "EXE201\\Models\\Payment.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Models\\Payment.cs",
+              "RelativeToolTip": "EXE201\\Models\\Payment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T15:07:54.381Z",
+              "WhenOpened": "2025-04-18T07:53:52.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "EXE201\\Controllers\\PaymentController.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\PaymentController.cs",
+              "RelativeToolTip": "EXE201\\Controllers\\PaymentController.cs",
+              "ViewState": "AgIAABUBAAAAAAAAAAAUwEsBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T13:38:57.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PaymentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\PaymentRepository.cs",
+              "RelativeDocumentMoniker": "EXE201\\Repository\\PaymentRepository.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\PaymentRepository.cs",
+              "RelativeToolTip": "EXE201\\Repository\\PaymentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T06:14:33.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\PaymentService.cs",
+              "RelativeDocumentMoniker": "EXE201\\Service\\PaymentService.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\PaymentService.cs",
+              "RelativeToolTip": "EXE201\\Service\\PaymentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T05:43:38.82Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "BookingRepository .cs",
-              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\BookingRepository .cs",
-              "RelativeDocumentMoniker": "EXE201\\Repository\\BookingRepository .cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\BookingRepository .cs*",
-              "RelativeToolTip": "EXE201\\Repository\\BookingRepository .cs*",
-              "ViewState": "AgIAACMAAAAAAAAAAAAYwFQAAAAAAAAAAAAAAA==",
+              "Title": "IPaymentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\Interface\\IPaymentRepository.cs",
+              "RelativeDocumentMoniker": "EXE201\\Repository\\Interface\\IPaymentRepository.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\Interface\\IPaymentRepository.cs",
+              "RelativeToolTip": "EXE201\\Repository\\Interface\\IPaymentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T16:56:13.784Z",
+              "WhenOpened": "2025-04-18T06:15:30.511Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "IReviewRepository.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\Interface\\IReviewRepository.cs",
+              "RelativeDocumentMoniker": "EXE201\\Repository\\Interface\\IReviewRepository.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\Interface\\IReviewRepository.cs",
+              "RelativeToolTip": "EXE201\\Repository\\Interface\\IReviewRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T06:18:13.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IPaymentService.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\Interface\\IPaymentService.cs",
+              "RelativeDocumentMoniker": "EXE201\\Service\\Interface\\IPaymentService.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\Interface\\IPaymentService.cs",
+              "RelativeToolTip": "EXE201\\Service\\Interface\\IPaymentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T05:43:13.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PackageServiceService.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\PackageServiceService.cs",
+              "RelativeDocumentMoniker": "EXE201\\Service\\PackageServiceService.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\PackageServiceService.cs",
+              "RelativeToolTip": "EXE201\\Service\\PackageServiceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T14:42:22.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ServiceService.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\ServiceService.cs",
+              "RelativeDocumentMoniker": "EXE201\\Service\\ServiceService.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\ServiceService.cs",
+              "RelativeToolTip": "EXE201\\Service\\ServiceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T06:35:49.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EXE201Context.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Models\\EXE201Context.cs",
+              "RelativeDocumentMoniker": "EXE201\\Models\\EXE201Context.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Models\\EXE201Context.cs",
+              "RelativeToolTip": "EXE201\\Models\\EXE201Context.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAA7wD8AAACMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T07:53:44.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PackageServiceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\PackageServiceRepository.cs",
+              "RelativeDocumentMoniker": "EXE201\\Repository\\PackageServiceRepository.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\PackageServiceRepository.cs",
+              "RelativeToolTip": "EXE201\\Repository\\PackageServiceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T14:43:45.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "IBookingRepository.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\Interface\\IBookingRepository.cs",
               "RelativeDocumentMoniker": "EXE201\\Repository\\Interface\\IBookingRepository.cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\Interface\\IBookingRepository.cs*",
-              "RelativeToolTip": "EXE201\\Repository\\Interface\\IBookingRepository.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA4AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\Interface\\IBookingRepository.cs",
+              "RelativeToolTip": "EXE201\\Repository\\Interface\\IBookingRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T16:39:22.281Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IBookingDetailRepository.cs",
-              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\Interface\\IBookingDetailRepository.cs",
-              "RelativeDocumentMoniker": "EXE201\\Repository\\Interface\\IBookingDetailRepository.cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\Interface\\IBookingDetailRepository.cs*",
-              "RelativeToolTip": "EXE201\\Repository\\Interface\\IBookingDetailRepository.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAABSAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "BookingService.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\BookingService.cs",
+              "RelativeDocumentMoniker": "EXE201\\Service\\BookingService.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\BookingService.cs",
+              "RelativeToolTip": "EXE201\\Service\\BookingService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAxwBoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T16:38:36.215Z",
+              "WhenOpened": "2025-04-17T16:57:34.935Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BookingController.cs",
-              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\BookingController.cs",
-              "RelativeDocumentMoniker": "EXE201\\Controllers\\BookingController.cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\BookingController.cs",
-              "RelativeToolTip": "EXE201\\Controllers\\BookingController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwDAAAAA7AAAAAAAAAA==",
+              "DocumentIndex": 19,
+              "Title": "PackageController.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\PackageController.cs",
+              "RelativeDocumentMoniker": "EXE201\\Controllers\\PackageController.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\PackageController.cs",
+              "RelativeToolTip": "EXE201\\Controllers\\PackageController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAuwFQAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T08:55:59.917Z",
+              "WhenOpened": "2025-04-17T13:38:49.397Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BookingDetailService.cs",
-              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\BookingDetailService.cs",
-              "RelativeDocumentMoniker": "EXE201\\Service\\BookingDetailService.cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\BookingDetailService.cs*",
-              "RelativeToolTip": "EXE201\\Service\\BookingDetailService.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "ReviewRepository.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\ReviewRepository.cs",
+              "RelativeDocumentMoniker": "EXE201\\Repository\\ReviewRepository.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\ReviewRepository.cs",
+              "RelativeToolTip": "EXE201\\Repository\\ReviewRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T16:53:13.146Z",
+              "WhenOpened": "2025-04-18T07:16:36.572Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 16,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Program.cs",
+              "RelativeDocumentMoniker": "EXE201\\Program.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Program.cs",
+              "RelativeToolTip": "EXE201\\Program.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAQwDQAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T06:34:43.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BookingRepository .cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\BookingRepository .cs",
+              "RelativeDocumentMoniker": "EXE201\\Repository\\BookingRepository .cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\BookingRepository .cs",
+              "RelativeToolTip": "EXE201\\Repository\\BookingRepository .cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAQwDIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T16:56:13.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ReviewService.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\ReviewService.cs",
+              "RelativeDocumentMoniker": "EXE201\\Service\\ReviewService.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\ReviewService.cs",
+              "RelativeToolTip": "EXE201\\Service\\ReviewService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T06:32:18.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PackageService.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\PackageService.cs",
+              "RelativeDocumentMoniker": "EXE201\\Service\\PackageService.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\PackageService.cs",
+              "RelativeToolTip": "EXE201\\Service\\PackageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T06:36:16.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IPackageServiceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\Interface\\IPackageServiceRepository.cs",
+              "RelativeDocumentMoniker": "EXE201\\Repository\\Interface\\IPackageServiceRepository.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\Interface\\IPackageServiceRepository.cs",
+              "RelativeToolTip": "EXE201\\Repository\\Interface\\IPackageServiceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T15:05:36.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "IBookingService.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\Interface\\IBookingService.cs",
               "RelativeDocumentMoniker": "EXE201\\Service\\Interface\\IBookingService.cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\Interface\\IBookingService.cs*",
-              "RelativeToolTip": "EXE201\\Service\\Interface\\IBookingService.cs*",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\Interface\\IBookingService.cs",
+              "RelativeToolTip": "EXE201\\Service\\Interface\\IBookingService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T16:59:19.05Z",
@@ -362,33 +572,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IBookingDetailService.cs",
-              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\Interface\\IBookingDetailService.cs",
-              "RelativeDocumentMoniker": "EXE201\\Service\\Interface\\IBookingDetailService.cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\Interface\\IBookingDetailService.cs",
-              "RelativeToolTip": "EXE201\\Service\\Interface\\IBookingDetailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T16:57:23.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AccountRepository.cs",
-              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\AccountRepository.cs",
-              "RelativeDocumentMoniker": "EXE201\\Repository\\AccountRepository.cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\AccountRepository.cs",
-              "RelativeToolTip": "EXE201\\Repository\\AccountRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T16:51:20.79Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 22,
               "Title": "PackageRepository.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\PackageRepository.cs",
               "RelativeDocumentMoniker": "EXE201\\Repository\\PackageRepository.cs",
@@ -401,12 +585,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 26,
+              "Title": "BookingDetailRepository.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\BookingDetailRepository.cs",
+              "RelativeDocumentMoniker": "EXE201\\Repository\\BookingDetailRepository.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\BookingDetailRepository.cs",
+              "RelativeToolTip": "EXE201\\Repository\\BookingDetailRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAowCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T15:07:54.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "BookingDetailController.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\BookingDetailController.cs",
               "RelativeDocumentMoniker": "EXE201\\Controllers\\BookingDetailController.cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\BookingDetailController.cs*",
-              "RelativeToolTip": "EXE201\\Controllers\\BookingDetailController.cs*",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\BookingDetailController.cs",
+              "RelativeToolTip": "EXE201\\Controllers\\BookingDetailController.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAYwEUAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T08:55:16.087Z",
@@ -414,20 +611,85 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "PackageServiceRepository.cs",
-              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\PackageServiceRepository.cs",
-              "RelativeDocumentMoniker": "EXE201\\Repository\\PackageServiceRepository.cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\PackageServiceRepository.cs",
-              "RelativeToolTip": "EXE201\\Repository\\PackageServiceRepository.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAACIAAAANAAAAAAAAAA==",
+              "DocumentIndex": 24,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "EXE201\\Controllers\\BookingController.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "EXE201\\Controllers\\BookingController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAcwFoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T14:43:45.786Z",
+              "WhenOpened": "2025-04-17T08:55:59.917Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 23,
+              "Title": "PackageServiceController.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\PackageServiceController.cs",
+              "RelativeDocumentMoniker": "EXE201\\Controllers\\PackageServiceController.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\PackageServiceController.cs",
+              "RelativeToolTip": "EXE201\\Controllers\\PackageServiceController.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAUwGIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T13:38:48.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "IBookingDetailService.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\Interface\\IBookingDetailService.cs",
+              "RelativeDocumentMoniker": "EXE201\\Service\\Interface\\IBookingDetailService.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\Interface\\IBookingDetailService.cs",
+              "RelativeToolTip": "EXE201\\Service\\Interface\\IBookingDetailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T16:57:23.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IBookingDetailRepository.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\Interface\\IBookingDetailRepository.cs",
+              "RelativeDocumentMoniker": "EXE201\\Repository\\Interface\\IBookingDetailRepository.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\Interface\\IBookingDetailRepository.cs",
+              "RelativeToolTip": "EXE201\\Repository\\Interface\\IBookingDetailRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T16:38:36.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "BookingDetailService.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\BookingDetailService.cs",
+              "RelativeDocumentMoniker": "EXE201\\Service\\BookingDetailService.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\BookingDetailService.cs",
+              "RelativeToolTip": "EXE201\\Service\\BookingDetailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T16:53:13.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "EXE201\\Repository\\AccountRepository.cs",
+              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\AccountRepository.cs",
+              "RelativeToolTip": "EXE201\\Repository\\AccountRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T16:51:20.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
               "Title": "IAccountRepository.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\Interface\\IAccountRepository.cs",
               "RelativeDocumentMoniker": "EXE201\\Repository\\Interface\\IAccountRepository.cs",
@@ -440,7 +702,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 32,
               "Title": "BookingDTOCreate.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\DTO\\Booking\\BookingDTOCreate.cs",
               "RelativeDocumentMoniker": "EXE201\\Controllers\\DTO\\Booking\\BookingDTOCreate.cs",
@@ -448,11 +710,12 @@
               "RelativeToolTip": "EXE201\\Controllers\\DTO\\Booking\\BookingDTOCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:42:10.168Z"
+              "WhenOpened": "2025-04-17T13:42:10.168Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 33,
               "Title": "IPackageServiceService.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\Interface\\IPackageServiceService.cs",
               "RelativeDocumentMoniker": "EXE201\\Service\\Interface\\IPackageServiceService.cs",
@@ -460,11 +723,12 @@
               "RelativeToolTip": "EXE201\\Service\\Interface\\IPackageServiceService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T14:48:33.901Z"
+              "WhenOpened": "2025-04-17T14:48:33.901Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 34,
               "Title": "IPackageService.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\Interface\\IPackageService.cs",
               "RelativeDocumentMoniker": "EXE201\\Service\\Interface\\IPackageService.cs",
@@ -472,11 +736,12 @@
               "RelativeToolTip": "EXE201\\Service\\Interface\\IPackageService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T15:13:14.588Z"
+              "WhenOpened": "2025-04-17T15:13:14.588Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 35,
               "Title": "IPackageRepository.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\Interface\\IPackageRepository.cs",
               "RelativeDocumentMoniker": "EXE201\\Repository\\Interface\\IPackageRepository.cs",
@@ -484,59 +749,12 @@
               "RelativeToolTip": "EXE201\\Repository\\Interface\\IPackageRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T15:07:19.213Z"
+              "WhenOpened": "2025-04-17T15:07:19.213Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "PackageController.cs",
-              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\PackageController.cs",
-              "RelativeDocumentMoniker": "EXE201\\Controllers\\PackageController.cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\PackageController.cs",
-              "RelativeToolTip": "EXE201\\Controllers\\PackageController.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAuwFQAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:38:49.397Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "IPackageServiceRepository.cs",
-              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\Interface\\IPackageServiceRepository.cs",
-              "RelativeDocumentMoniker": "EXE201\\Repository\\Interface\\IPackageServiceRepository.cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\Interface\\IPackageServiceRepository.cs",
-              "RelativeToolTip": "EXE201\\Repository\\Interface\\IPackageServiceRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T15:05:36.277Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "PackageServiceController.cs",
-              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\PackageServiceController.cs",
-              "RelativeDocumentMoniker": "EXE201\\Controllers\\PackageServiceController.cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\PackageServiceController.cs",
-              "RelativeToolTip": "EXE201\\Controllers\\PackageServiceController.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAUwGIAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:38:48.92Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "PackageServiceService.cs",
-              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\PackageServiceService.cs",
-              "RelativeDocumentMoniker": "EXE201\\Service\\PackageServiceService.cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\PackageServiceService.cs",
-              "RelativeToolTip": "EXE201\\Service\\PackageServiceService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T14:42:22.691Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 36,
               "Title": "ICartItemRepository.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\Interface\\ICartItemRepository.cs",
               "RelativeDocumentMoniker": "EXE201\\Repository\\Interface\\ICartItemRepository.cs",
@@ -544,11 +762,12 @@
               "RelativeToolTip": "EXE201\\Repository\\Interface\\ICartItemRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T14:13:50.432Z"
+              "WhenOpened": "2025-04-17T14:13:50.432Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 37,
               "Title": "PackageDTOCreate.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\DTO\\Package\\PackageDTOCreate.cs",
               "RelativeDocumentMoniker": "EXE201\\Controllers\\DTO\\Package\\PackageDTOCreate.cs",
@@ -556,11 +775,12 @@
               "RelativeToolTip": "EXE201\\Controllers\\DTO\\Package\\PackageDTOCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T14:40:46.926Z"
+              "WhenOpened": "2025-04-17T14:40:46.926Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 38,
               "Title": "PackageServiceDTOCreate.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\DTO\\PackageService\\PackageServiceDTOCreate.cs",
               "RelativeDocumentMoniker": "EXE201\\Controllers\\DTO\\PackageService\\PackageServiceDTOCreate.cs",
@@ -568,11 +788,12 @@
               "RelativeToolTip": "EXE201\\Controllers\\DTO\\PackageService\\PackageServiceDTOCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T14:25:36.213Z"
+              "WhenOpened": "2025-04-17T14:25:36.213Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 40,
               "Title": "ServiceController.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\ServiceController.cs",
               "RelativeDocumentMoniker": "EXE201\\Controllers\\ServiceController.cs",
@@ -580,11 +801,12 @@
               "RelativeToolTip": "EXE201\\Controllers\\ServiceController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T14:35:06.829Z"
+              "WhenOpened": "2025-04-17T14:35:06.829Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 39,
               "Title": "ReviewController.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\ReviewController.cs",
               "RelativeDocumentMoniker": "EXE201\\Controllers\\ReviewController.cs",
@@ -592,23 +814,12 @@
               "RelativeToolTip": "EXE201\\Controllers\\ReviewController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:38:56.991Z"
+              "WhenOpened": "2025-04-17T13:38:56.991Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "PaymentController.cs",
-              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\PaymentController.cs",
-              "RelativeDocumentMoniker": "EXE201\\Controllers\\PaymentController.cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\PaymentController.cs",
-              "RelativeToolTip": "EXE201\\Controllers\\PaymentController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:38:57.492Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 42,
               "Title": "CartItemController.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\CartItemController.cs",
               "RelativeDocumentMoniker": "EXE201\\Controllers\\CartItemController.cs",
@@ -616,11 +827,12 @@
               "RelativeToolTip": "EXE201\\Controllers\\CartItemController.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAwwEMAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:36:22.665Z"
+              "WhenOpened": "2025-04-17T13:36:22.665Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 43,
               "Title": "CartController.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\CartController.cs",
               "RelativeDocumentMoniker": "EXE201\\Controllers\\CartController.cs",
@@ -628,11 +840,12 @@
               "RelativeToolTip": "EXE201\\Controllers\\CartController.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAQwCYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:36:22.104Z"
+              "WhenOpened": "2025-04-17T13:36:22.104Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 44,
               "Title": "CartItemService.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\CartItemService.cs",
               "RelativeDocumentMoniker": "EXE201\\Service\\CartItemService.cs",
@@ -640,11 +853,12 @@
               "RelativeToolTip": "EXE201\\Service\\CartItemService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T14:12:14.426Z"
+              "WhenOpened": "2025-04-17T14:12:14.426Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 45,
               "Title": "ICartItemService.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\Interface\\ICartItemService.cs",
               "RelativeDocumentMoniker": "EXE201\\Service\\Interface\\ICartItemService.cs",
@@ -652,11 +866,12 @@
               "RelativeToolTip": "EXE201\\Service\\Interface\\ICartItemService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T14:15:28.731Z"
+              "WhenOpened": "2025-04-17T14:15:28.731Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 41,
               "Title": "ServiceDTOCreate.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\DTO\\Service\\ServiceDTOCreate.cs",
               "RelativeDocumentMoniker": "EXE201\\Controllers\\DTO\\Service\\ServiceDTOCreate.cs",
@@ -664,11 +879,12 @@
               "RelativeToolTip": "EXE201\\Controllers\\DTO\\Service\\ServiceDTOCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:38:45.342Z"
+              "WhenOpened": "2025-04-17T13:38:45.342Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 46,
               "Title": "CartItemRepository.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Repository\\CartItemRepository.cs",
               "RelativeDocumentMoniker": "EXE201\\Repository\\CartItemRepository.cs",
@@ -676,11 +892,12 @@
               "RelativeToolTip": "EXE201\\Repository\\CartItemRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T14:13:23.754Z"
+              "WhenOpened": "2025-04-17T14:13:23.754Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 47,
               "Title": "CartService.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Service\\CartService.cs",
               "RelativeDocumentMoniker": "EXE201\\Service\\CartService.cs",
@@ -688,35 +905,12 @@
               "RelativeToolTip": "EXE201\\Service\\CartService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T14:12:13.868Z"
+              "WhenOpened": "2025-04-17T14:12:13.868Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Cart.cs",
-              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Models\\Cart.cs",
-              "RelativeDocumentMoniker": "EXE201\\Models\\Cart.cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Models\\Cart.cs",
-              "RelativeToolTip": "EXE201\\Models\\Cart.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T14:10:14.457Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "CartItem.cs",
-              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Models\\CartItem.cs",
-              "RelativeDocumentMoniker": "EXE201\\Models\\CartItem.cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Models\\CartItem.cs",
-              "RelativeToolTip": "EXE201\\Models\\CartItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T14:10:13.803Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 48,
               "Title": "DiscountController.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\DiscountController.cs",
               "RelativeDocumentMoniker": "EXE201\\Controllers\\DiscountController.cs",
@@ -724,11 +918,12 @@
               "RelativeToolTip": "EXE201\\Controllers\\DiscountController.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:38:47.405Z"
+              "WhenOpened": "2025-04-17T13:38:47.405Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 49,
               "Title": "BookingDTO.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\DTO\\Booking\\BookingDTO.cs",
               "RelativeDocumentMoniker": "EXE201\\Controllers\\DTO\\Booking\\BookingDTO.cs",
@@ -736,23 +931,12 @@
               "RelativeToolTip": "EXE201\\Controllers\\DTO\\Booking\\BookingDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:42:10.741Z"
+              "WhenOpened": "2025-04-17T13:42:10.741Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "BookingDetail.cs",
-              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Models\\BookingDetail.cs",
-              "RelativeDocumentMoniker": "EXE201\\Models\\BookingDetail.cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Models\\BookingDetail.cs",
-              "RelativeToolTip": "EXE201\\Models\\BookingDetail.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:40:07.613Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 51,
               "Title": "BookingDetailDTO.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\DTO\\BookingDetail\\BookingDetailDTO.cs",
               "RelativeDocumentMoniker": "EXE201\\Controllers\\DTO\\BookingDetail\\BookingDetailDTO.cs",
@@ -760,23 +944,12 @@
               "RelativeToolTip": "EXE201\\Controllers\\DTO\\BookingDetail\\BookingDetailDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:42:07.507Z"
+              "WhenOpened": "2025-04-17T13:42:07.507Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "Booking.cs",
-              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Models\\Booking.cs",
-              "RelativeDocumentMoniker": "EXE201\\Models\\Booking.cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Models\\Booking.cs",
-              "RelativeToolTip": "EXE201\\Models\\Booking.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:40:09.055Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 50,
               "Title": "BookingDetailDTOCreate.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\DTO\\BookingDetail\\BookingDetailDTOCreate.cs",
               "RelativeDocumentMoniker": "EXE201\\Controllers\\DTO\\BookingDetail\\BookingDetailDTOCreate.cs",
@@ -784,11 +957,12 @@
               "RelativeToolTip": "EXE201\\Controllers\\DTO\\BookingDetail\\BookingDetailDTOCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:38:43.191Z"
+              "WhenOpened": "2025-04-17T13:38:43.191Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 52,
               "Title": "NotificationController.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\NotificationController.cs",
               "RelativeDocumentMoniker": "EXE201\\Controllers\\NotificationController.cs",
@@ -796,11 +970,12 @@
               "RelativeToolTip": "EXE201\\Controllers\\NotificationController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:38:47.899Z"
+              "WhenOpened": "2025-04-17T13:38:47.899Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 53,
               "Title": "LoginDTO.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\DTO\\LoginDTO.cs",
               "RelativeDocumentMoniker": "EXE201\\Controllers\\DTO\\LoginDTO.cs",
@@ -808,11 +983,12 @@
               "RelativeToolTip": "EXE201\\Controllers\\DTO\\LoginDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:38:46.37Z"
+              "WhenOpened": "2025-04-17T13:38:46.37Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 55,
               "Title": "AccountDTOCreate.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\DTO\\Account\\AccountDTOCreate.cs",
               "RelativeDocumentMoniker": "EXE201\\Controllers\\DTO\\Account\\AccountDTOCreate.cs",
@@ -820,11 +996,12 @@
               "RelativeToolTip": "EXE201\\Controllers\\DTO\\Account\\AccountDTOCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:38:42.544Z"
+              "WhenOpened": "2025-04-17T13:38:42.544Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 56,
               "Title": "AccountDTO.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\DTO\\Account\\AccountDTO.cs",
               "RelativeDocumentMoniker": "EXE201\\Controllers\\DTO\\Account\\AccountDTO.cs",
@@ -832,11 +1009,12 @@
               "RelativeToolTip": "EXE201\\Controllers\\DTO\\Account\\AccountDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:38:42.094Z"
+              "WhenOpened": "2025-04-17T13:38:42.094Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 57,
               "Title": "DestinationController.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\DestinationController.cs",
               "RelativeDocumentMoniker": "EXE201\\Controllers\\DestinationController.cs",
@@ -844,11 +1022,12 @@
               "RelativeToolTip": "EXE201\\Controllers\\DestinationController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:36:23.187Z"
+              "WhenOpened": "2025-04-17T13:36:23.187Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 54,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "EXE201\\Controllers\\AccountController.cs",
@@ -856,11 +1035,12 @@
               "RelativeToolTip": "EXE201\\Controllers\\AccountController.cs",
               "ViewState": "AgIAAFYAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:36:01.18Z"
+              "WhenOpened": "2025-04-17T13:36:01.18Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 58,
               "Title": "CartDTOCreate.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\DTO\\Cart\\CartDTOCreate.cs",
               "RelativeDocumentMoniker": "EXE201\\Controllers\\DTO\\Cart\\CartDTOCreate.cs",
@@ -868,11 +1048,12 @@
               "RelativeToolTip": "EXE201\\Controllers\\DTO\\Cart\\CartDTOCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:35:49.661Z"
+              "WhenOpened": "2025-04-17T13:35:49.661Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 59,
               "Title": "CartDTO.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\DTO\\Cart\\CartDTO.cs",
               "RelativeDocumentMoniker": "EXE201\\Controllers\\DTO\\Cart\\CartDTO.cs",
@@ -880,35 +1061,12 @@
               "RelativeToolTip": "EXE201\\Controllers\\DTO\\Cart\\CartDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:35:49.167Z"
+              "WhenOpened": "2025-04-17T13:35:49.167Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "News.cs",
-              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Models\\News.cs",
-              "RelativeDocumentMoniker": "EXE201\\Models\\News.cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Models\\News.cs",
-              "RelativeToolTip": "EXE201\\Models\\News.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:35:34.172Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "Account.cs",
-              "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Models\\Account.cs",
-              "RelativeDocumentMoniker": "EXE201\\Models\\Account.cs",
-              "ToolTip": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Models\\Account.cs",
-              "RelativeToolTip": "EXE201\\Models\\Account.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:35:31.834Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 60,
               "Title": "ItineraryController.cs",
               "DocumentMoniker": "C:\\Users\\karsa\\Desktop\\Github\\EXE201-BookTour\\EXE201\\Controllers\\ItineraryController.cs",
               "RelativeDocumentMoniker": "EXE201\\Controllers\\ItineraryController.cs",
@@ -916,7 +1074,8 @@
               "RelativeToolTip": "EXE201\\Controllers\\ItineraryController.cs",
               "ViewState": "AgIAAEoAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T08:55:36.764Z"
+              "WhenOpened": "2025-04-17T08:55:36.764Z",
+              "EditorCaption": ""
             }
           ]
         },

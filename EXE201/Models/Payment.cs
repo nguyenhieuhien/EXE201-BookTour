@@ -11,7 +11,7 @@ public partial class Payment
 
     public long BookingId { get; set; }
 
-    public string OrderCode { get; set; }
+    public long? OrderCode { get; set; }
 
     public decimal Amount { get; set; }
 

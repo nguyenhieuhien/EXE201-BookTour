@@ -62,9 +62,6 @@ public partial class EXE201Context : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer(GetConnectionString("DefaultConnection")).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-    //    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-    //        => optionsBuilder.UseSqlServer("Data Source=LAPTOP-990UPKS6;Initial Catalog=EXE201;User ID=sa;Password=12345");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -309,9 +306,9 @@ public partial class EXE201Context : DbContext
 
             entity.ToTable("Payment");
 
-            entity.HasIndex(e => e.TransactionId, "UQ__Payment__55433A6A5D001B7B").IsUnique();
+            entity.HasIndex(e => e.OrderCode, "UQ_Payment_OrderCode").IsUnique();
 
-            entity.HasIndex(e => e.OrderCode, "UQ__Payment__999B5229D2741C1B").IsUnique();
+            entity.HasIndex(e => e.TransactionId, "UQ__Payment__55433A6A5D001B7B").IsUnique();
 
             entity.Property(e => e.Amount).HasColumnType("decimal(18, 2)");
             entity.Property(e => e.CancelUrl).HasMaxLength(500);
@@ -319,10 +316,6 @@ public partial class EXE201Context : DbContext
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
             entity.Property(e => e.Description).HasMaxLength(255);
-            entity.Property(e => e.OrderCode)
-                .IsRequired()
-                .HasMaxLength(50)
-                .IsUnicode(false);
             entity.Property(e => e.PaymentLink).HasMaxLength(500);
             entity.Property(e => e.PaymentMethod)
                 .HasMaxLength(50)
