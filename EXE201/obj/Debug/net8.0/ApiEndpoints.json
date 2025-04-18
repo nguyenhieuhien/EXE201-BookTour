@@ -1024,12 +1024,18 @@
   },
   {
     "ContainingType": "EXE201.Controllers.PayOSController",
-    "Method": "Webhook",
-    "RelativePath": "api/PayOS/webhook",
-    "HttpMethod": "POST",
+    "Method": "ConfirmPayOsTransaction",
+    "RelativePath": "api/PayOS/update",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "paymentDTO",
+        "Type": "EXE201.Controllers.DTO.Payment.PaymentDTO",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
