@@ -36,13 +36,15 @@ public async Task<ActionResult<IEnumerable<AccountDTO>>> GetAll()
             Phone = account.Phone,
             IsActive = account.IsActive,
         }).ToList();
-    }catch (Exception ex)
-    {
-        throw new BadHttpRequestException(ex.Message.ToString());
-    }
 
-    return Ok();
+        return Ok(result); // <- You were missing this line
+    }
+    catch (Exception ex)
+    {
+        return BadRequest($"An error occurred: {ex.Message}");
+    }
 }
+
 
 
         [HttpGet("{id}")]
