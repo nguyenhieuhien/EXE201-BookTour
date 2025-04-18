@@ -26,11 +26,21 @@ namespace EXE201.Controllers
             var user = _systemAccountService.Authenticate(request.UserName, request.Password);
 
             if (user == null || user.Result == null)
-                return Unauthorized();
+                return Unauthorized(new
+                {
+                    success = false,
+                    message = "Invalid username or password",
+                    errorCode = "UNAUTHORIZED"
+                });
 
             var token = GenerateJSONWebToken(user.Result);
 
-            return Ok(token);
+            return Ok(new
+            {
+                success = true,
+                message = "Login successful",
+                data = new { token }
+            });
         }
 
         private string GenerateJSONWebToken(Account account)
@@ -83,13 +93,20 @@ namespace EXE201.Controllers
                 };
 
                 var principal = tokenHandler.ValidateToken(token, validationParameters, out SecurityToken validatedToken);
-                var claims = principal.Claims.ToDictionary(c => c.Type, c => c.Value);
+                var claims = principal.Claims;
+
+                // Transform claims into a simplified structure
+                var simplifiedData = new
+                {
+                    username = claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value,
+                    role = claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value
+                };
 
                 return Ok(new
                 {
                     success = true,
                     message = "Token is valid",
-                    data = claims
+                    data = simplifiedData
                 });
             }
             catch (SecurityTokenExpiredException)
@@ -125,4 +142,4 @@ namespace EXE201.Controllers
     }
 
     public sealed record LoginRequest(string UserName, string Password);
-    }
+}
