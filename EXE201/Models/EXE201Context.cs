@@ -308,8 +308,6 @@ public partial class EXE201Context : DbContext
 
             entity.HasIndex(e => e.OrderCode, "UQ_Payment_OrderCode").IsUnique();
 
-            entity.HasIndex(e => e.TransactionId, "UQ__Payment__55433A6A5D001B7B").IsUnique();
-
             entity.Property(e => e.Amount).HasColumnType("decimal(18, 2)");
             entity.Property(e => e.CancelUrl).HasMaxLength(500);
             entity.Property(e => e.CreatedAt)
@@ -317,18 +315,12 @@ public partial class EXE201Context : DbContext
                 .HasColumnType("datetime");
             entity.Property(e => e.Description).HasMaxLength(255);
             entity.Property(e => e.PaymentLink).HasMaxLength(500);
-            entity.Property(e => e.PaymentMethod)
-                .HasMaxLength(50)
-                .IsUnicode(false);
             entity.Property(e => e.ReturnUrl).HasMaxLength(500);
             entity.Property(e => e.Status)
                 .IsRequired()
                 .HasMaxLength(20)
                 .IsUnicode(false)
                 .HasDefaultValue("PENDING");
-            entity.Property(e => e.TransactionId)
-                .HasMaxLength(50)
-                .IsUnicode(false);
 
             entity.HasOne(d => d.Booking).WithMany(p => p.Payments)
                 .HasForeignKey(d => d.BookingId)

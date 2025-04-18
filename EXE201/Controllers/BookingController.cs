@@ -44,14 +44,13 @@ namespace EXE201.Controllers
             {   
                 //Id = bookingDto.Id,
                 AccountId = bookingDtoCreate.AccountId,
-                DiscountId = bookingDtoCreate.DiscountId,
+                //DiscountId = bookingDtoCreate.DiscountId,
                 Description = bookingDtoCreate.Description,
                 BookingDate = bookingDtoCreate.BookingDate,
                 TotalPrice = 0,
-                Status = bookingDtoCreate.Status,
+                Status = "PENDING",
                 IsActive = true 
             };
-
             await _bookingService.AddBooking(booking);
             return CreatedAtAction(nameof(GetById), new { id = booking.Id }, bookingDtoCreate);
         }

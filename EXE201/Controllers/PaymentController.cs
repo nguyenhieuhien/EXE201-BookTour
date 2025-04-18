@@ -43,7 +43,7 @@ namespace EXE201.Controllers
             {
                 var booking = await _bookingService.GetBookingById(bookingId);
                 if (booking == null)
-                {
+                {   
                     _logger.LogWarning("Booking not found for ID: {BookingId}", bookingId);
                     return NotFound(new { message = "Không tìm thấy đơn đặt." });
                 }
