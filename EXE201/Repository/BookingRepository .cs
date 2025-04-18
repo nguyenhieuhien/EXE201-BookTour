@@ -50,6 +50,7 @@ namespace EXE201.Repositories
                 .FirstOrDefaultAsync();
         }
 
+
         public async Task AddBooking(Booking booking)
         {
             await _context.Bookings.AddAsync(booking);
@@ -86,6 +87,19 @@ namespace EXE201.Repositories
         public async Task UpdateBooking(Booking booking)
         {
             _context.Bookings.Update(booking);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task UpdateBookingStatusAsync(long bookingId, string status)
+        {
+            var existingBooking = await _context.Bookings.FindAsync(bookingId);
+            if (existingBooking == null)
+            {
+                throw new KeyNotFoundException($"Booking with ID {bookingId} not found.");
+            }
+
+            existingBooking.Status = status;
+            _context.Bookings.Update(existingBooking);
             await _context.SaveChangesAsync();
         }
 

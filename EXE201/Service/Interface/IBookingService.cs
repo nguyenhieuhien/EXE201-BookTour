@@ -11,7 +11,7 @@ namespace EXE201.Service.Interface
         Task<BookingDTO?> GetBookingById(long id);
         Task AddBooking(Booking booking);
         Task RecalculateTotalPriceAsync(long bookingId);
-
+        Task UpdateBookingStatusAsync(long bookingId, string status);
         Task UpdateBooking(Booking booking);
         Task DeleteBooking(long id);
     }

@@ -1,4 +1,5 @@
 ﻿using EXE201.Controllers.DTO.Payment;
+using EXE201.Controllers.DTO.Booking;
 using EXE201.Models;
 using EXE201.Service.Interface;
 using Microsoft.AspNetCore.Mvc;
@@ -107,84 +108,59 @@ namespace EXE201.Controllers
         }
 
         [HttpPut("update")]
-
-        public async Task<IActionResult> ConfirmPayOsTransaction(PaymentDTO paymentDTO)
+        public async Task<IActionResult> ConfirmPayOsTransaction([FromBody] PaymentDTO paymentDTO)
         {
-
-
-            // Kiểm tra trạng thái thanh toán
-            var transactionInfo = await _payOS.getPaymentLinkInformation(paymentDTO.OrderCode);
-            
-
-            if  (transactionInfo.status == "CANCELLED") {
-                var payment = await _paymentService.GetByOrderCodeAsync(paymentDTO.OrderCode);
-                payment.Status = "CANCELLED";
-                await _paymentService.UpdatePaymentAsync(payment);
-                return Ok(new { message = "Đã cập nhật trạng thái" });
-
-            }
-            if (transactionInfo.status == "PAID")
+            try
             {
-                var payments = await _paymentService.GetByOrderCodeAsync(paymentDTO.OrderCode);
-                payments.Status = "PAID";
-                await _paymentService.UpdatePaymentAsync(payments);
-                return Ok(new { message = "Đã cập nhật trạng thái" });
+                // Kiểm tra trạng thái thanh toán từ PayOS
+                var transactionInfo = await _payOS.getPaymentLinkInformation(paymentDTO.OrderCode);
+                var payment = await _paymentService.GetByOrderCodeAsync(paymentDTO.OrderCode);
+
+                if (payment == null)
+                {
+                    _logger.LogWarning("Payment not found for OrderCode: {OrderCode}", paymentDTO.OrderCode);
+                    return NotFound(new { message = "Không tìm thấy thanh toán." });
+                }
+
+                // Lấy BookingDTO liên quan
+                var bookingDTO = await _bookingService.GetBookingById(payment.BookingId);
+                if (bookingDTO == null)
+                {
+                    _logger.LogWarning("Booking not found for ID: {BookingId}", payment.BookingId);
+                    return NotFound(new { message = "Không tìm thấy đơn đặt." });
+                }
+
+                string newBookingStatus = bookingDTO.Status;
+
+                if (transactionInfo.status == "CANCELLED")
+                {
+                    payment.Status = "CANCELLED";
+                    newBookingStatus = "CANCELLED";
+                    await _paymentService.UpdatePaymentAsync(payment);
+                    await _bookingService.UpdateBookingStatusAsync(payment.BookingId, newBookingStatus);
+                    _logger.LogInformation("Payment and Booking status updated to CANCELLED for OrderCode: {OrderCode}", paymentDTO.OrderCode);
+                    return Ok(new { message = "Đã cập nhật trạng thái thanh toán và đơn đặt thành hủy." });
+                }
+                else if (transactionInfo.status == "PAID")
+                {
+                    payment.Status = "PAID";
+                    newBookingStatus = "Confirmed"; // Giả sử trạng thái Booking khi thanh toán thành công là COMPLETED
+                    await _paymentService.UpdatePaymentAsync(payment);
+                    await _bookingService.UpdateBookingStatusAsync(payment.BookingId, newBookingStatus);
+                    _logger.LogInformation("Payment and Booking status updated to PAID/COMPLETED for OrderCode: {OrderCode}", paymentDTO.OrderCode);
+                    return Ok(new { message = "Đã cập nhật trạng thái thanh toán và đơn đặt thành công." });
+                }
+                else
+                {
+                    _logger.LogWarning("Invalid transaction status: {Status} for OrderCode: {OrderCode}", transactionInfo.status, paymentDTO.OrderCode);
+                    return BadRequest(new { message = "Trạng thái giao dịch không hợp lệ." });
+                }
             }
-
-
-            return BadRequest(new { message = "Đã thanh toán" });
-
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error updating payment and booking status for OrderCode: {OrderCode}", paymentDTO.OrderCode);
+                return StatusCode(500, new { message = "Lỗi server", error = ex.Message });
+            }
         }
     }
 }
-
-
-                //[HttpPost("webhook")]
-                //public async Task<IActionResult> HandleWebhook([FromBody] WebhookType webhookBody)
-                //{
-                //    try
-                //    {
-                //        // Xác minh webhook từ PayOS
-                //        var verifiedData = _payOS.verifyPaymentWebhookData(webhookBody);
-                //        if (verifiedData == null)
-                //        {
-                //            _logger.LogWarning("Invalid webhook data or signature for OrderCode: {OrderCode}", webhookBody?.data?.orderCode);
-                //            return BadRequest(new { message = "Dữ liệu webhook không hợp lệ hoặc chữ ký không khớp." });
-                //        }
-
-                //        // Tìm kiếm thanh toán theo OrderCode
-                //        var payment = await _paymentService.GetByOrderCodeAsync(verifiedData.orderCode);
-                //        if (payment == null)
-                //        {
-                //            _logger.LogWarning("Payment not found for OrderCode: {OrderCode}", verifiedData.orderCode);
-                //            return NotFound(new { message = "Không tìm thấy thanh toán." });
-                //        }
-
-                //        // Kiểm tra trạng thái thanh toán thành công
-                //        if (webhookBody.code == "00" && webhookBody.success)
-                //        {
-                //            // Chỉ cập nhật nếu trạng thái hiện tại không phải là "PAID"
-                //            if (payment.Status != "PAID")
-                //            {
-                //                payment.Status = "PAID";
-                //                await _paymentService.UpdatePaymentAsync(payment);
-                //                _logger.LogInformation("Payment status updated to PAID for OrderCode: {OrderCode}", verifiedData.orderCode);
-                //            }
-                //            else
-                //            {
-                //                _logger.LogInformation("Payment already in PAID status for OrderCode: {OrderCode}", verifiedData.orderCode);
-                //            }
-                //            return Ok(new { message = "Cập nhật trạng thái thanh toán thành công." });
-                //        }
-
-                //        // Trường hợp không phải thanh toán thành công
-                //        _logger.LogInformation("Webhook processed but no status update for OrderCode: {OrderCode}", verifiedData.orderCode);
-                //        return Ok(new { message = "Webhook đã được xử lý." });
-                //    }
-                //    catch (Exception ex)
-                //    {
-                //        _logger.LogError(ex, "Error processing webhook for OrderCode: {OrderCode}", webhookBody?.data?.orderCode);
-                //        return StatusCode(500, new { message = "Lỗi server", error = ex.Message });
-                //    }
-                //}
-            
