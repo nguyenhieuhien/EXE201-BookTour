@@ -21,7 +21,7 @@ namespace EXE201.Controllers
         }
 
 
-        [HttpGet]
+[HttpGet]
 public async Task<ActionResult<IEnumerable<AccountDTO>>> GetAll()
 {
     try
@@ -38,12 +38,11 @@ public async Task<ActionResult<IEnumerable<AccountDTO>>> GetAll()
         }).ToList();
     }catch (Exception ex)
     {
-        Console.WriteLine(ex.Message.ToString());
+        throw new BadHttpRequestException(ex.Message.ToString());
     }
 
     return Ok();
 }
-
 
 
         [HttpGet("{id}")]
