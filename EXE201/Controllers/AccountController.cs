@@ -22,21 +22,27 @@ namespace EXE201.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<AccountDTO>>> GetAll()
+public async Task<ActionResult<IEnumerable<AccountDTO>>> GetAll()
+{
+    try
+    {
+        var accounts = await _accountService.GetAllAsync();
+        var result = accounts.Select(account => new AccountDTO
         {
-            var accounts = await _accountService.GetAllAsync();
-            var result = accounts.Select(account => new AccountDTO
-            {
-                Id = account.Id,
-                UserName = account.UserName,
-                Password = account.Password,
-                Email = account.Email,
-                Phone = account.Phone,
-                IsActive = account.IsActive,
-            }).ToList();
+            Id = account.Id,
+            UserName = account.UserName,
+            Password = account.Password,
+            Email = account.Email,
+            Phone = account.Phone,
+            IsActive = account.IsActive,
+        }).ToList();
+    }catch (Exception ex)
+    {
+        Console.WriteLine(ex.Message.ToString());
+    }
 
-            return Ok(result);
-        }
+    return Ok();
+}
 
 
 
