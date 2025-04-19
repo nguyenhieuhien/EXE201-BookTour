@@ -16,24 +16,24 @@ namespace EXE201.Controllers
             _discountService = discountService;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<DiscountDTO>>> GetAll()
-        {
-            var discounts = await _discountService.GetAllDiscountsAsync();
-            var result = new List<DiscountDTO>();
-            foreach (var discount in discounts)
-            {
-                result.Add(new DiscountDTO
-                {
-                    Id = discount.Id,
-                    Code = discount.Code,
-                    Percentage = discount.Percentage,
-                    ExpiryDate = discount.ExpiryDate,
-                    IsActive = discount.IsActive,
-                });
-            }
-            return Ok(result);
-        }
+        //[HttpGet]
+        //public async Task<ActionResult<IEnumerable<DiscountDTO>>> GetAll()
+        //{
+        //    var discounts = await _discountService.GetAllDiscountsAsync();
+        //    var result = new List<DiscountDTO>();
+        //    foreach (var discount in discounts)
+        //    {
+        //        result.Add(new DiscountDTO
+        //        {
+        //            Id = discount.Id,
+        //            Code = discount.Code,
+        //            Percentage = discount.Percentage,
+        //            ExpiryDate = discount.ExpiryDate,
+        //            IsActive = discount.IsActive,
+        //        });
+        //    }
+        //    return Ok(result);
+        //}
 
         [HttpGet("{id}")]
         public async Task<ActionResult<DiscountDTO>> GetById(long id)
